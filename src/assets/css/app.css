@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.banner-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 0, 24, 0.88) 19.66%,
+    rgba(0, 0, 0, 0.04) 117.35%
+  );
+  backdrop-filter: blur(2px);
+}
+#exampleFrameBottomModal,
+#defaultModal,
+#rightTopModal2,
+#rightTopModal1 {
+  backdrop-filter: blur(5px);
+}
+.custom-upload {
+  text-align: left;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.custom-upload i {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #1f1f1f;
+}
+
+.upload-text {
+  font-weight: normal;
+  color: #1f1f1f;
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radius {
+    border-radius: 10px;
+    overflow: hidden;
+    width: fit-content;
+
+  }
+  
+  .gradient-border-bg {
+    border: 3px solid;
+    border-image: linear-gradient(90deg, #3740F9 0%, #FFF2AE 43.39%, #E053A5 100%) 1;
+    padding: 10px;
+    border-radius: 5px;
+    background: #e2e2e26c;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    width: fit-content;
+  }
+  .top-grad{
+    background: radial-gradient(
+    50% 50% at 0% 0%,
+    #024A4A 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    z-index: -2;
+  }
+  .top-grad-2{
+    background: radial-gradient(
+    50% 50% at 0% 0%,
+    #024A4A 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    z-index: -2;
+    transform: scaleX(-1);
+  }
+  body{
+    scroll-behavior: smooth;
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition-property: opacity;
+    transition-duration: .25s;
+  }
+  
+  .fade-enter-active {
+    transition-delay: .25s;
+  }
+  
+  .fade-enter, .fade-leave-active {
+    opacity: 0
+  }
+/* @keyframes curvedshadow {
+  0% {
+    box-shadow: 10px 10px 0px 0px #ed7a07;
+  }
+  50% {
+    box-shadow: -10px 10px 0px 0px #ed7a07;
+  }
+  100% {
+    box-shadow: 10px 10px 0px 0px #ed7a07;
+  }
+} */
+.contact-form input{
+  border:none
+}
+.contact-form textarea:focus,
+.contact-form input:focus{
+  border:none;
+  outline: none;
+}
