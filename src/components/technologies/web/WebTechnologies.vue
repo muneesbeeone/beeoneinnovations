@@ -5,7 +5,7 @@
             <div
                 class="text-center flex  flex-col justify-center items-center w-full lg:text-center font-sans space-y-12">
                 <h1
-                    class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl sans 2xl:text-6xl font-bold tracking-tight text-white">
+                    class="text-3xl md:text-4xl relative technology lg:text-5xl xl:text-6xl sans 2xl:text-6xl font-bold tracking-tight text-white">
                     Our Technologies
                 </h1>
                 <div class="flex flex-wrap items-center mx-auto justify-center gap-5">
@@ -96,3 +96,6 @@ export default {
 
 }
 </script>
+<style>
+
+</style>

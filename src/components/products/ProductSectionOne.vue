@@ -5,7 +5,7 @@
     <img class="absolute right-0 rotate-0 -z-50 -scale-x-100 top-0" src="../../assets/img/mask2.webp" alt="" />
     <div>
       <div class="grid gap-5 justify-center mt-5">
-        <div data-aos="fade-up"  data-aos-duration="1000" data-aos-easing="ease-in-out"
+        <div data-aos="fade-up"  data-aos-duration="1000" id="dnft" data-aos-easing="ease-in-out"
           class="p-[1px] bg-gradient-to-br from-[#1D1D1D] to-[#232323] rounded-xl relative overflow-hidden">
           <img class="absolute z-10" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
@@ -35,7 +35,7 @@
             </div>
           </div>
         </div>
-        <div data-aos="fade-up"  data-aos-duration="1000" data-aos-easing="ease-in-out"
+        <div data-aos="fade-up"  data-aos-duration="1000" id="techbank" data-aos-easing="ease-in-out"
           class="p-[1px] bg-gradient-to-br from-[#1D1D1D] to-[#232323] rounded-xl relative overflow-hidden">
           <img class="absolute z-10" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
@@ -67,7 +67,7 @@
             </div>
           </div>
         </div>
-        <div data-aos="fade-up"  data-aos-duration="1000" data-aos-easing="ease-in-out"
+        <div data-aos="fade-up"  data-aos-duration="1000" id="dwallet" data-aos-easing="ease-in-out"
           class="p-[1px] bg-gradient-to-br from-[#1D1D1D] to-[#232323] rounded-xl relative overflow-hidden">
           <img class="absolute z-10" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
@@ -108,7 +108,7 @@
             </div>
           </div>
         </div>
-        <div data-aos="fade-up"  data-aos-duration="1000" data-aos-easing="ease-in-out"
+        <div data-aos="fade-up"  data-aos-duration="1000" id="dbank" data-aos-easing="ease-in-out"
           class="p-[1px] bg-gradient-to-br from-[#1D1D1D] to-[#232323] rounded-xl relative overflow-hidden">
           <img class="absolute z-10" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">

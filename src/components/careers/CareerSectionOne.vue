@@ -18,9 +18,9 @@
       </div>
     </div>
     <div class="flex flex-col px-2 space-y-4 py-10">
-      <div  @click="isOpeningOne = !isOpeningOne" class="p-[1px] cursor-pointer bg-gradient-to-br from-green-500 via-blue-200 to-purple-600 rounded-xl">
-        <div class="max-w-full flex flex-col justify-between h-full space-y-4 bg-[#171717] p-5 rounded-xl">
-          <div class="flex justify-between items-center">
+      <div  @click="isOpeningOne = !isOpeningOne" class="p-[1px] cursor-pointer bg-gradient-to-br relative overflow-hidden from-green-500 via-blue-200 to-purple-600 rounded-xl">        
+        <div class="max-w-full flex flex-col relative justify-between h-full space-y-4 z-10 bg-gradient-to-r from-[#1D1D1D] to-[#232323] rounded-xl p-5">
+          <div class="flex justify-between items-center relative z-10">
             <div>
               <h4 class="text-[#1FFFBC] text-2xl font-bold font-sans">
                 Product Designer
@@ -28,13 +28,17 @@
               <p class="text-white">Openings : 1 | Experience 2+ | Kochi | Full Time</p>
             </div>
             <div class="flex items-center gap-5">
-              <button @click.stop="" class="md:block hidden"><img class="h-10" src="../../assets/img/applybutton.svg" alt=""></button>
+              <button data-twe-toggle="modal" data-twe-target="#exampleModalCareer" data-twe-ripple-init
+                data-twe-ripple-color="light" class="md:block hidden"><img class="h-10" src="../../assets/img/applybutton.svg" alt=""></button>
               <i class='bx text-4xl text-white' :class="isOpeningOne ? 'bx-chevron-down' : 'bx-chevron-up'"></i>
             </div>
           </div>
-          <div class="md:border-t-2 border-t-0 transition-all duration-1000 relative"
+        <img class="w-[100%] h-[100%] absolute left-0 bottom-0" src="../../assets/img/careervector.png" alt="">
+
+          <div class="md:border-t-2 border-t-0 transition-all duration-1000 relative z-20"
             :class="isOpeningOne ? 'h-0 hidden' : 'h-full block'">
-            <button @click.stop="" class="md:hidden block "><img class="" src="../../assets/img/apply-large-btn.svg" alt=""></button>
+            <button data-twe-toggle="modal" data-twe-target="#exampleModalCareer" data-twe-ripple-init
+                data-twe-ripple-color="light" class="md:hidden block "><img class="" src="../../assets/img/apply-large-btn.svg" alt=""></button>
             <div class="mission pt-6">
               <h5 class="text-white text-xl font-semibold">Job Discription</h5>
               <p class="text-white mt-3">
@@ -74,9 +78,9 @@
           </div>
         </div>
       </div>
-      <div class="p-[1px] cursor-pointer bg-gradient-to-br from-green-500 via-blue-200 to-purple-600 rounded-xl" @click="isOpeningTwo = !isOpeningTwo">
-        <div class="max-w-full flex flex-col justify-between h-full space-y-4 bg-[#171717] p-5 rounded-xl">
-          <div class="flex justify-between items-center">
+      <div  @click="isOpeningTwo = !isOpeningTwo" class="p-[1px] cursor-pointer bg-gradient-to-br relative overflow-hidden from-green-500 via-blue-200 to-purple-600 rounded-xl">        
+        <div class="max-w-full flex flex-col relative justify-between h-full space-y-4 z-10 bg-gradient-to-r from-[#1D1D1D] to-[#232323] rounded-xl p-5">
+          <div class="flex justify-between items-center relative z-10">
             <div>
               <h4 class="text-[#1FFFBC] text-2xl font-bold font-sans">
                 Manuel Tester
@@ -84,13 +88,17 @@
               <p class="text-white">Openings : 1 | Experience 2+ | Kochi | Full Time</p>
             </div>
             <div class="flex items-center gap-5">
-              <button @click.stop="" class="md:block hidden"><img class="h-10" src="../../assets/img/applybutton.svg" alt=""></button>
+              <button data-twe-toggle="modal" data-twe-target="#exampleModalCareer" data-twe-ripple-init
+                data-twe-ripple-color="light" class="md:block hidden"><img class="h-10" src="../../assets/img/applybutton.svg" alt=""></button>
               <i class='bx text-4xl text-white' :class="isOpeningTwo ? 'bx-chevron-down' : 'bx-chevron-up'"></i>
             </div>
           </div>
+        <img class="w-[100%] h-[100%] absolute left-0 bottom-0" src="../../assets/img/careervector.png" alt="">
+
           <div class="md:border-t-2 border-t-0 transition-all duration-1000 relative"
             :class="isOpeningTwo ? 'h-0 hidden' : 'h-full block'">
-            <button @click.stop="" class="md:hidden block "><img class="" src="../../assets/img/apply-large-btn.svg" alt=""></button>
+            <button data-twe-toggle="modal" data-twe-target="#exampleModalCareer" data-twe-ripple-init
+                data-twe-ripple-color="light" class="md:hidden block "><img class="" src="../../assets/img/apply-large-btn.svg" alt=""></button>
 
             <div class="mission pt-6">
               <h5 class="text-white text-xl font-semibold">Job Discription</h5>

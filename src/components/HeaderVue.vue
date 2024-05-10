@@ -1,7 +1,8 @@
 <template>
-  <header class="absolute inset-x-0 top-0 z-50">
+  <header class="inset-x-0 top-0 z-50 transition-all duration-1000 absolute" id="header" 
+>
     <nav
-      class="flex px-0 md:px-5 w-full flex-nowrap items-center justify-between text-white py-5 hover:text-neutral-100 focus:text-neutral-100 lg:flex-wrap lg:justify-start lg:py-4"
+      class="flex navbar px-0 md:px-5 w-full flex-nowrap items-center justify-between text-white py-5 hover:text-neutral-100 focus:text-neutral-100 lg:flex-wrap lg:justify-start lg:py-2"
       data-twe-navbar-ref>
       <div class="flex w-full flex-wrap items-center justify-between px-3">
         <div class="ms-2">
@@ -26,103 +27,63 @@
 
         <!-- Collapsible navbar container -->
         <div
-          class="!visible mt-2 hidden md:backdrop-blur-none backdrop-blur-lg bg-white/30 md:bg-transparent rounded-lg flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
+          class="!visible mt-2 hidden md:backdrop-blur-none backdrop-blur-xl bg-[#222222BD] md:bg-transparent rounded-lg flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
           id="navbarSupportedContent3" data-twe-collapse-item>
           <!-- Left links -->
+          <div class="md:hidden py-5" style="font-family: Montserrat;">
+            <h2 class="text-center text-[#414040] text-6xl font-black">Menu</h2>
+          </div>
           <ul
-            class="list-style-none relative overflow-hidden text-center ms-auto flex flex-col ps-0 divide-y md:divide-y-0 divide-gray-400 md:hover:divide-y-0 hover:divide-y-2 lg:mt-1 lg:flex-row"
+            class="list-style-none font-[400] relative overflow-hidden text-center ms-auto flex flex-col ps-0 lg:mt-1 lg:flex-row"
             data-twe-navbar-nav-ref>
             <!-- Home link -->
-            <li class="py-4 ps-2 lg:my-0 lg:pe-1 hover:bg-gray-50/50 md:hover:bg-transparent lg:ps-2"
-              data-twe-nav-item-ref>
-              <a class="text-white lg:px-2" aria-current="page" href="#/" data-twe-nav-link-ref>Home</a>
+            <li :class="navItemClass('/')" @click="navigateTo('/')">
+              <router-link class="lg:px-2 cool-link" to="/" :class="isActive('/') ? 'active' : ''" aria-current="page"
+                data-twe-nav-link-ref>Home</router-link>
             </li>
-            <li class="py-4 ps-2 lg:my-0 lg:pe-1 hover:bg-gray-50/50 md:hover:bg-transparent lg:ps-2"
-              data-twe-nav-item-ref>
-              <a class="text-white lg:px-2" aria-current="page" href="#/technologies"
-                data-twe-nav-link-ref>Technologies</a>
+            <!-- Technologies link -->
+            <li :class="navItemClass('/technologies')" @click="navigateTo('/technologies')">
+              <router-link class="text-white lg:px-2 cool-link" to="/technologies"
+                :class="isActive('/technologies') ? 'active' : ''" aria-current="page"
+                data-twe-nav-link-ref>Technologies</router-link>
             </li>
-            <li class="py-4 ps-2 lg:my-0 lg:pe-1 hover:bg-gray-50/50 md:hover:bg-transparent lg:ps-2"
-              data-twe-nav-item-ref>
-              <a class="text-white lg:px-2" aria-current="page" href="#/products" data-twe-nav-link-ref>Products</a>
+            <!-- Products link -->
+            <li :class="navItemClass('/products')" @click="navigateTo('/products')">
+              <router-link class="text-white lg:px-2 cool-link" to="/products"
+                :class="isActive('/products') ? 'active' : ''" aria-current="page"
+                data-twe-nav-link-ref>Products</router-link>
             </li>
-            <li class="py-4 ps-2 lg:my-0 lg:pe-1 hover:bg-gray-50/50 md:hover:bg-transparent lg:ps-2"
-              data-twe-nav-item-ref>
-              <a class="text-white lg:px-2" aria-current="page" href="#/aboutus" data-twe-nav-link-ref>About us</a>
+            <!-- About Us link -->
+            <li :class="navItemClass('/aboutus')" @click="navigateTo('/aboutus')">
+              <router-link class="text-white lg:px-2 cool-link" to="/aboutus"
+                :class="isActive('/aboutus') ? 'active' : ''" aria-current="page" data-twe-nav-link-ref>About
+                us</router-link>
             </li>
-            <li class="py-4 ps-2 lg:my-0 lg:pe-1 hover:bg-gray-50/50 md:hover:bg-transparent lg:ps-2"
-              data-twe-nav-item-ref>
-              <a class="text-white lg:px-2" aria-current="page" href="#/careers" data-twe-nav-link-ref>Careers</a>
+            <!-- Careers link -->
+            <li :class="navItemClass('/careers')" @click="navigateTo('/careers')">
+              <router-link class="text-white lg:px-2 cool-link" to="/careers"
+                :class="isActive('/careers') ? 'active' : ''" aria-current="page"
+                data-twe-nav-link-ref>Careers</router-link>
             </li>
-            <li class="py-4 ps-2 lg:my-0 lg:pe-1 hover:bg-gray-50/50 md:hover:bg-transparent lg:ps-2"
-              data-twe-nav-item-ref>
-              <a class="text-white lg:px-2" aria-current="page" href="#" data-twe-nav-link-ref>Blogs</a>
+            <!-- Blogs link -->
+            <li :class="navItemClass('https://beeoneinnovations.com/blogs/')">
+              <a class="text-white lg:px-2 cool-link" href="https://beeoneinnovations.com/blogs/" target="_blank"
+                data-twe-nav-link-ref
+                :class="isActive('https://beeoneinnovations.com/blogs/') ? 'active' : ''">Blogs</a>
             </li>
-            <li class="py-4 ps-2 lg:my-0 lg:pe-1 hover:bg-gray-50/50 md:hover:bg-transparent lg:ps-2 hidden md:block"
+            <!-- Contact Us button -->
+            <li :class="navItemClass('/contactus')" class="block md:hidden" @click="navigateTo('/contactus')">
+              <router-link class="text-white lg:px-2 cool-link" to="/contactus"
+                :class="isActive('/contactus') ? 'active' : ''" aria-current="page" data-twe-nav-link-ref>Contact
+                Us</router-link>
+            </li>
+            <li
+              class="py-4 ps-2 lg:my-0 lg:pe-1 rounded-lg hover:bg-black/20 md:hover:bg-transparent lg:ps-2 hidden md:block"
               data-twe-nav-item-ref>
               <button data-twe-toggle="modal" data-twe-target="#exampleModalCenter" data-twe-ripple-init
-                data-twe-ripple-color="light" class="text-white lg:px-2 bg-gray-500 rounded-md">Contact Us</button>
+                data-twe-ripple-color="light" class="text-white lg:px-2 bg-gray-500 rounded-md">Contact
+                Us</button>
             </li>
-            <!-- Dropdown link -->
-            <!-- <li
-              class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0"
-              data-twe-nav-item-ref
-              data-twe-dropdown-ref
-            >
-              <a
-                class="flex items-center text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                href="#"
-                type="button"
-                id="dropdownMenuButton2"
-                data-twe-dropdown-toggle-ref
-                aria-expanded="false"
-              >
-                Dropdown
-                <span class="ms-1 [&>svg]:w-5">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </a>
-              <ul
-                class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
-                aria-labelledby="dropdownMenuButton1"
-                data-twe-dropdown-menu-ref
-              >
-                <li>
-                  <a
-                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                    href="#"
-                    data-twe-dropdown-item-ref
-                    >Action</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                    href="#"
-                    data-twe-dropdown-item-ref
-                    >Another action</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                    href="#"
-                    data-twe-dropdown-item-ref
-                    >Something else here</a
-                  >
-                </li>
-              </ul>
-            </li> -->
           </ul>
         </div>
         <!-- Collapsible wrapper -->
@@ -134,10 +95,108 @@
 import { Collapse, initTWE } from "tw-elements";
 export default {
   data() {
-    return {};
+    return {
+      currentLocation: window.location.pathname,
+      isFadeOut: false,
+      isSticky: false,
+      scrollThreshold: 120
+    };
   },
   mounted() {
     initTWE({ Collapse });
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    isActive(route) {
+      return this.$route.path === route;
+    },
+    navItemClass(route) {
+      return {
+        'py-4': true,
+        'ps-2': true,
+        'lg:my-0': true,
+        'lg:pe-1': true,
+        'rounded-lg': true,
+        'hover:bg-black/20': true,
+        'md:hover:bg-transparent': true,
+        'lg:ps-2': true
+      };
+    },
+    handleScroll() {
+      const header = document.getElementById("header");
+      if (header) {
+        this.isFadeOut = window.scrollY >= 5;
+        this.isSticky = window.scrollY >= this.scrollThreshold;
+      }
+    },
+    navigateTo(router) {
+      this.$router.push(router);
+    }
+  },
+  watch: {
+    // Watch for changes in currentLocation
+    currentLocation(newValue, oldValue) {
+      // React to changes here, if needed
+      console.log('Current location changed:', oldValue, '->', newValue);
+      // You can also update other properties or perform additional actions here
+    }
   },
 };
 </script>
+<style>
+.active {
+  color: #ffffff;
+  /* Example color for active link */
+  font-weight: 700;
+  /* Example font weight for active link */
+}
+
+/* li {
+  margin-bottom: 10px;
+} */
+
+.cool-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #1FFFBC;
+  transition: width .3s;
+  margin-top: 3px;
+
+}
+
+.cool-link.active::after,
+.cool-link:hover::after {
+  margin-top: 3px;
+  width: 100%;
+  transition: width .3s;
+}
+
+@media (min-width: 768px) {
+
+  .cool-link.active::after,
+  .cool-link:hover::after {
+    margin-top: 3px;
+    width: 70%;
+    transition: width .3s;
+  }
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+  .fade-in {
+    opacity: 10;
+    transition: opacity 3s ease;
+  }
+  
+</style>

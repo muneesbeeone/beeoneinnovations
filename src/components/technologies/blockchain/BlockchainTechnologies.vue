@@ -3,9 +3,9 @@
         <img class="absolute left-0 w-[25%] -z-50 top-0" src="../../../assets/img/mask2.webp" alt="">
         <img class="absolute right-0 w-[25%] rotate-0 -z-50 - bottom-0" src="../../../assets/img/mask3.webp" alt="">
 
-        <div class="px-3 space-y-20 flex flex-col">
+        <div class="px-3 space-y-20 relative flex flex-col">
             <h1
-                class="text-3xl md:text-4xl text-center lg:text-5xl xl:text-6xl sans 2xl:text-6xl font-bold tracking-tight text-white">
+                class="text-3xl technologyblock  md:text-4xl text-center lg:text-5xl xl:text-6xl sans 2xl:text-6xl font-bold tracking-tight text-white">
                 Our Technologies
             </h1>
             <div class="flex flex-wrap items-center mx-auto justify-center gap-5">

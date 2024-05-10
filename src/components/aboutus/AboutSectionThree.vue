@@ -9,7 +9,7 @@
         People of Innovation
       </h1>
     </div>
-    <div class="grid grid-cols-4 gap-5 pt-10 lg:pt-20 sm:pt-38 px-3">
+    <div class="grid md:grid-cols-4 grid-cols-2 gap-5 pt-10 lg:pt-20 sm:pt-38 px-3">
       <div v-for="(item, index) in team" :key="index" class="text-gray-50 space-y-3 bg-[#252525] p-2">
         <img v-if="item.image" :key="index" :src="item.image" alt="">
         <div class="space-y-1">

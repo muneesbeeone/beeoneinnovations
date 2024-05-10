@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative overflow-hidden w-full lg:px-12 py-10 lg:py-20 sm:py-38 justify-between items-center"
+    class="relative bg-black overflow-hidden w-full lg:px-12 py-10 lg:py-20 sm:py-38 justify-between items-center"
   >
   <img class="absolute left-0 w-[25%] -z-50 top-0" src="../../assets/img/mask2.webp" alt="">
     <img class="absolute right-0 w-[25%] rotate-0 -z-50 - bottom-0" src="../../assets/img/mask3.webp" alt="">
@@ -10,7 +10,7 @@
         class="text-center items-center max-w-2xl lg:text-start font-sans space-y-5"
       >
         <h1
-          class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl sans 2xl:text-6xl font-bold tracking-tight text-white"
+          class="text-3xl md:text-4xl roundedvectorthree relative lg:text-5xl xl:text-6xl sans 2xl:text-6xl font-bold tracking-tight text-white"
         >
           Seeking Clarity?<br />Reach Out!
         </h1>

@@ -47,6 +47,7 @@ import MobileTechnologies from './mobile/MobileTechnologies.vue';
 import MobileApps from './MobileApps.vue';
 import WebTechnologies from './web/WebTechnologies.vue';
 import WebDevelopment from './WebDevelopment.vue';
+import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
 export default {
   components: { BlockChain, MobileApps, WebDevelopment, BlockchainContent, WebTechnologies, MobileTechnologies },
   data() {
@@ -56,8 +57,26 @@ export default {
         { name: 'Mobile' },
         { name: 'Website' }
       ],
-      currentTab: 0
+      currentTab: this.selectedTechnology
     }
+  },
+  computed: {
+    ...mapState({
+      selectedTechnology: 'selectedTechnology',
+    }),
+  },
+  watch:{
+    selectedTechnology:{
+      handler(){
+        this.currentTab = this.selectedTechnology
+      }
+    }
+  },
+  created(){
+    this.currentTab = this.selectedTechnology
+  },
+  methods: {
+    ...mapActions(['selectTechnology']),
   },
 };
 </script>

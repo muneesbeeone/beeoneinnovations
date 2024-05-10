@@ -9,7 +9,9 @@
     </transition>
     <enquiry-modal/>
     <career-modal/>
+    <scroll-progres />
     <footer-vue />
+    <!-- <success-modal/> -->
   </div>
 </template>
 
@@ -19,10 +21,17 @@ import HeaderVue from "./components/HeaderVue.vue";
 import AOS from "aos";
 import EnquiryModal from './components/common/EnquiryModal.vue';
 import CareerModal from './components/common/CareerModal.vue';
+import SuccessModal from './components/common/SuccessModal.vue';
+import ScrollProgres from './components/common/ScrollProgres.vue';
 
 export default {
-  components: { FooterVue, HeaderVue, EnquiryModal, CareerModal },
+  components: { FooterVue, HeaderVue, EnquiryModal, CareerModal, SuccessModal, ScrollProgres },
   name: "App",
+  data() {
+    return {
+
+    };
+  },
   mounted() {
     AOS.init();
   },
@@ -30,5 +39,4 @@ export default {
 </script>
 
 <style>
-/* Add your global styles here */
 </style>

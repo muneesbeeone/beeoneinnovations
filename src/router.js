@@ -16,6 +16,11 @@ const routes = [
     name: "Technologies",
     component: Technologies,
   },
+  // {
+  //   path: "/technologies/:id",
+  //   name: "Technologies",
+  //   component: Technologies,
+  // },
   {
     path: "/products",
     name: "Products",

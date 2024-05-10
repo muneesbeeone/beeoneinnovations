@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative max-h-[1080px] md:min-h-screen min-h-auto overflow-hidden w-full lg:px-12 pt-10 lg:pt-20 sm:pt-38 justify-between items-center">
+    class="relative panel bg-black max-h-[1080px] md:min-h-screen min-h-auto overflow-hidden w-full lg:px-12 pt-10 lg:pt-20 sm:pt-38 justify-between items-center">
     <!-- <div class="top-grad absolute top-0 left-0"></div> -->
     <!-- <div class="top-grad-2 top-0 absolute"></div> -->
     <img class="absolute left-0 -z-50 top-0 hidden md:block" src="../../assets/img/mask2.webp" alt="" />

@@ -1,13 +1,13 @@
 <template>
-  <div class="relative min-h-screen lg:px-12 pt-10 lg:pt-20 sm:pt-38 flex items-center">
+  <div class="relative panel bg-black min-h-screen overflow-hidden lg:px-12 pt-10 lg:pt-20 sm:pt-38 flex items-center">
     <!-- <header-vue /> -->
     <div class="relative z-10">
       <div class="w-screen flex items-center z-20 relative">
         <div
-          class="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 items-center px-3"
+          class="w-full min-h-screen  grid grid-cols-1 md:grid-cols-2 items-center px-3"
         >
-          <div class="text-center md:text-left  space-y-10 max-w-xl">
-            <div class="space-y-6">
+          <div class="text-center  md:text-left  space-y-10 max-w-xl">
+            <div class="space-y-6 ">
               <h1
                 class="font-bold font-sans tracking-tight text-white text-3xl md:text-5xl xl:text-6xl 2xl:text-6xl"
               >

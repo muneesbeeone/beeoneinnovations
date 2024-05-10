@@ -14,9 +14,10 @@
                     <div class="flex flex-shrink-0 items-center justify-between rounded-t-md p-4">
                         <!-- Modal title -->
                         <h5 class="text-3xl font-medium leading-normal text-white" id="exampleModalCenterTitle">
-                            Let's Work <br class="md:hidden block"/> Together
+                            Let's Work <br class="md:hidden block" /> Together
                         </h5>
-                        <img class="absolute h-28 -hue-rotate-45 left-[11rem] top-5 block md:hidden" src="../../assets/img/saly3.webp" alt="">
+                        <img class="absolute h-28 -hue-rotate-45 left-[11rem] top-5 block md:hidden"
+                            src="../../assets/img/saly3.webp" alt="">
                         <!-- Close button -->
                         <button type="button"
                             class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
@@ -46,19 +47,25 @@
                             <input placeholder="Phone"
                                 class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                         </div>
+                        
                         <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Email"
-                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
+                            <input type="file" @change="handleFileUpload" ref="fileInput" style="display: none" />
+                            <input placeholder="File"
+                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                                :value="selectedFileName" readonly @click="openFilePicker" />
+                            <i class="absolute bottom-3 right-1 bx bx-upload text-white" @click="openFilePicker"></i>
                         </div>
                         <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Phone"
-                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
+                            <select placeholder="Email"
+                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
+                                <option class="text-black" value="Product Designer">Product Designer</option>
+                                <option class="text-black" value="Manual Tester">Manual Tester</option>
+                            </select>
                         </div>
                     </div>
                     <div class="flex flex-shrink-0 flex-wrap items-center justify-end p-4">
-                        <button type="button"
-                            class="ms-1 inline-block rounded"
-                            data-twe-ripple-init data-twe-ripple-color="light">
+                        <button type="button" class="ms-1 inline-block rounded" data-twe-ripple-init
+                            data-twe-ripple-color="light">
                             <img class="h-10" src="./../../assets/img/apply-large-btn.svg" alt="" />
                         </button>
                     </div>
@@ -70,11 +77,29 @@
 <script>
 import { Modal, Ripple, initTWE } from "tw-elements";
 export default {
+    data() {
+        return {
+            selectedFile: null,
+            selectedFileName: 'Upload Resume...'
+        }
+    },
     mounted() {
         initTWE({
             Modal,
             Ripple,
         });
     },
-};
+    methods: {
+        openFilePicker() {
+            this.$refs.fileInput.click();
+        },
+        handleFileUpload(event) {
+            const file = event.target.files[0];
+            this.selectedFile = file;
+            this.selectedFileName = file ? file.name : 'Choose file...';
+            // Here you can implement your file upload logic
+
+        }
+    }
+}
 </script>

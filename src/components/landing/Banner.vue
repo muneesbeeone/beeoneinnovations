@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative min-h-screen  overflow-hidden max-h-[1080px] lg:px-12 py-10  lg:py-20 sm:py-38  flex justify-center">
+    class="relative min-h-screen overflow-hidden max-h-[1080px] lg:px-12 py-10  lg:py-20 sm:py-38  flex justify-center">
     <!-- <header-vue /> -->
     <div class="relative z-10">
       <div class=" w-screen flex items-center z-20 relative">
