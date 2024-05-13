@@ -27,7 +27,7 @@
 
         <!-- Collapsible navbar container -->
         <div
-          class="!visible  transition-all hidden -mt-16 md:backdrop-blur-none backdrop-blur-xl bg-[#222222BD] md:bg-transparent rounded-lg flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
+          class="!visible  transition-all hidden -mt-16 md:backdrop-blur-none backdrop-blur-xl bg-[#222222BD] md:bg-transparent rounded-cl flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
           id="navbarSupportedContent3" data-twe-collapse-item>
           <!-- Left links -->
           <div class="md:hidden py-5" style="font-family: Montserrat;">
