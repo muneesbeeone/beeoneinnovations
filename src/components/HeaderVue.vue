@@ -1,6 +1,6 @@
 <template>
-  <header class="inset-x-0 top-0 z-50 transition-all duration-1000 absolute" id="header" 
->
+  <!-- :class="[isSticky?'sticky fade-in backdrop-blur-lg':'absolute',isFadeOut?'fade-out':'fade-in']" -->
+  <header class="inset-x-0 absolute top-0 z-50 transition-all duration-1000" id="header" >
     <nav
       class="flex navbar px-0 md:px-5 w-full flex-nowrap items-center justify-between text-white py-5 hover:text-neutral-100 focus:text-neutral-100 lg:flex-wrap lg:justify-start lg:py-2"
       data-twe-navbar-ref>

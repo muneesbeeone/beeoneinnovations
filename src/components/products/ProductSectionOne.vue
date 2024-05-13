@@ -227,10 +227,10 @@ export default {
     }),
   },
   watch:{
-    product:{
+    selectedProduct:{
       handler(){
         setTimeout(()=>{
-          const element = this.$refs[this.product]
+          const element = this.$refs[this.selectedProduct]
           element.scrollIntoView({ behavior: 'smooth' })
         },1000)
       }
