@@ -40,14 +40,14 @@
           <div class="text-white font-bold">Products</div>
           <div class="flex text-md text-white mt-5">
             <ul class="list-disc ml-5">
-              <li><a href="/#products">Techbank</a></li>
-              <li><a href="/#technologies">Techbank movies</a></li>
-              <li><a href="/#technologies">Techbank Dwallet</a></li>
+              <li class="cursor-pointer" @click="selectProducts('techbank')">Techbank</li>
+              <li class="cursor-pointer" @click="selectProducts('movies')">Techbank movies</li>
+              <li class="cursor-pointer" @click="selectProducts('dwallet')">Techbank Dwallet</li>
             </ul>
             <ul class="list-disc ml-7">
-              <li>DNFT</li>
-              <li>Bee International</li>
-              <li>Dbank</li>
+              <li class="cursor-pointer" @click="selectProducts('dnft')">DNFT</li>
+              <li class="cursor-pointer" @click="selectProducts('bee')">Bee International</li>
+              <li class="cursor-pointer" @click="selectProducts('dbank')">Dbank</li> 
             </ul>
           </div>
         </div>
@@ -77,11 +77,16 @@
   </div>
 </template>
 <script>
+
 export default {
   methods: {
     selectTechnology(id) {
       this.$router.push({ name: "Technologies"});
       this.$store.dispatch('selectTechnology', id);
+    },
+    selectProducts(products) {
+      this.$store.dispatch('selectedProduct', products);
+      this.$router.push({ name: "Products"});
     }
   }
 };

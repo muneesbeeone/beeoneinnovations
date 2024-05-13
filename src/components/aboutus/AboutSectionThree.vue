@@ -83,7 +83,7 @@ export default {
           "id": 11,
           "name": "Muhammed Munees",
           "designation": "UI Developer",
-          "image": "/src/assets/img/team/munees1.webp"
+          "image": "/src/assets/img/team/munees.webp"
         },
         {
           "id": 12,
@@ -127,12 +127,12 @@ export default {
           "designation": "Blockchain Developer",
           "image": "/src/assets/img/team/aaram.webp"
         },
-        // {
-        //   "id": 8,
-        //   "name": "Ancy Sabu",
-        //   "designation": "Accounts Manager",
-        //   "image": "/src/assets/img/team/ancy.webp"
-        // }
+        {
+          "id": 25,
+          "name": "You Can Be The Next",
+          "designation": "View Latest Openings",
+          "image": "/src/assets/img/team/next.webp"
+        }
       ]
     }
   },

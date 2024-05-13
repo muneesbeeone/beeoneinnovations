@@ -6,7 +6,7 @@
         <div
           class="w-full min-h-screen  grid grid-cols-1 md:grid-cols-2 items-center px-3"
         >
-          <div class="text-center  md:text-left  space-y-10 max-w-xl">
+          <div class="text-center md:text-left  space-y-10 max-w-xl">
             <div class="space-y-6 ">
               <h1
                 class="font-bold font-sans tracking-tight text-white text-3xl md:text-5xl xl:text-6xl 2xl:text-6xl"
