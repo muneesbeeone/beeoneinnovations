@@ -159,10 +159,10 @@ html {
 .roundedvectorthree::before {
   content: url('../img/roundlong.svg');
   position: absolute;
-  margin-left: 32%;
-  margin-top: -1px;
-  z-index: -10;
-  width: 34%;
+  margin-left: 26%;
+  margin-top: -1%;
+  z-index: 0;
+  width: 30%;
 }
 h1.product::before {
   content: url('../img/roundvector.svg');
@@ -209,9 +209,9 @@ h1.product::before {
   }
   .roundedvectorthree::before {
     margin-top: -0.3%;
-    margin-left: 32%;
-    z-index: -10;
-    width: 35%;           
+    margin-left: 35%;
+    z-index: 0;
+    width: 30%;           
   }
   h1.product::before {
     margin-left: -5%;

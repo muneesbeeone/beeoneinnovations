@@ -2,7 +2,7 @@
   <div class="min-h-[300px] relative border-t-2 border-[#15A77B]">
     <div class="relative z-10 p-10 w-full">
       <div class="flex justify-between space-y-3 md:space-y-0 flex-wrap">
-        <div class="ms-2 space-y-5 max-w-xs">
+        <div class="ms-0 space-y-5 max-w-xs">
           <a href="/" class="">
             <img src="../assets/img/Beeone.webp" class="h-8 lg:h-12" alt="beeone Movies Logo" />
           </a>
@@ -71,7 +71,7 @@
         style="background-image: url('/src/assets/img/bannerstill.webp')" muted="" playsinline="" data-wf-ignore="true"
         data-object-fit="cover">
         <source src="../assets/img/beeonebanner1.webm" data-wf-ignore="true" />
-        <source src="../assets/img/beeonebanner1.mp4" data-wf-ignore="true" />
+        <source src="../assets/img/beeonebanner.mp4" data-wf-ignore="true" />
       </video>
     </div>
   </div>

@@ -2,18 +2,20 @@
   <div
     class="relative bg-black overflow-hidden w-full lg:px-12 py-10 lg:py-20 sm:py-38 justify-between items-center"
   >
-  <img class="absolute left-0 w-[25%] -z-50 top-0" src="../../assets/img/mask2.webp" alt="">
-    <img class="absolute right-0 w-[25%] rotate-0 -z-50 - bottom-0" src="../../assets/img/mask3.webp" alt="">
+  <img class="absolute left-0 w-[25%] z-0 top-0" src="../../assets/img/mask2.webp" alt="">
+    <img class="absolute right-0 w-[25%] rotate-0 z-0 - bottom-0" src="../../assets/img/mask3.webp" alt="">
 
     <div class="px-3 w-screen grid items-center grid-cols-1 md:grid-cols-2">
       <div
         class="text-center items-center max-w-2xl lg:text-start font-sans space-y-5"
       >
-        <h1
+        <div class="relative">
+          <h1
           class="text-3xl md:text-4xl roundedvectorthree relative lg:text-5xl xl:text-6xl sans 2xl:text-6xl font-bold tracking-tight text-white"
         >
           Seeking Clarity?<br />Reach Out!
         </h1>
+        </div>
         <div
           class="w-full flex items-center text-center justify-center relative block md:hidden"
         >
@@ -27,7 +29,7 @@
           </h1>
         </div>
         <div class="max-w-xl">
-          <p class="text-white">
+          <p class="text-white text-md md:text-lg">
             Unlock the potential of your online presence with BeeOne
             Innovation's website development expertise. Our team combines
             creativity and technical prowess to craft bespoke websites that

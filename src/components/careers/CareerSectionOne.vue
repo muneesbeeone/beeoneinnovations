@@ -19,10 +19,10 @@
     </div>
     <div class="flex flex-col px-2 space-y-4 py-10">
       <div  @click="isOpeningOne = !isOpeningOne" class="p-[1px] cursor-pointer bg-gradient-to-br relative overflow-hidden from-green-500 via-blue-200 to-purple-600 rounded-xl">        
-        <div class="max-w-full flex flex-col relative justify-between h-full space-y-4 z-10 bg-gradient-to-r from-[#1D1D1D] to-[#232323] rounded-xl p-5">
+        <div class="max-w-full flex relative overflow-hidden flex-col relative justify-between h-full space-y-4 z-10 bg-gradient-to-r from-[#1D1D1D] to-[#232323] rounded-xl p-5">
           <div class="flex justify-between items-center relative z-10">
             <div>
-              <h4 class="text-[#1FFFBC] text-2xl font-bold font-sans">
+              <h4 class="text-[#1FFFBC] text-lg md:text-2xl font-bold font-sans">
                 Product Designer
               </h4>
               <p class="text-white">Openings : 1 | Experience 2+ | Kochi | Full Time</p>
@@ -79,10 +79,10 @@
         </div>
       </div>
       <div  @click="isOpeningTwo = !isOpeningTwo" class="p-[1px] cursor-pointer bg-gradient-to-br relative overflow-hidden from-green-500 via-blue-200 to-purple-600 rounded-xl">        
-        <div class="max-w-full flex flex-col relative justify-between h-full space-y-4 z-10 bg-gradient-to-r from-[#1D1D1D] to-[#232323] rounded-xl p-5">
+        <div class="max-w-full relative overflow-hidden flex flex-col relative justify-between h-full space-y-4 z-10 bg-gradient-to-r from-[#1D1D1D] to-[#232323] rounded-xl p-5">
           <div class="flex justify-between items-center relative z-10">
             <div>
-              <h4 class="text-[#1FFFBC] text-2xl font-bold font-sans">
+              <h4 class="text-[#1FFFBC] text-lg md:text-2xl font-bold font-sans">
                 Manuel Tester
               </h4>
               <p class="text-white">Openings : 1 | Experience 2+ | Kochi | Full Time</p>

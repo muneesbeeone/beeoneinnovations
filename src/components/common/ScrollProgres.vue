@@ -1,5 +1,5 @@
 <template>
-  <div class="scroll-progress-container">
+  <div class="scroll-progress-container w-[5px] h-[30%] md:h-[50%]">
     <div class="scroll-progress relative overflow-hidden" :style="{ height: progress + '%' }">
       <!-- <div class="w-[10px] bg-[#94ffdf] h-[80%] flex justify-start"></div> -->
     </div>
@@ -34,8 +34,6 @@ export default {
   position: fixed;
   top: 25%;
   right: 10px;
-  height: 50vh;
-  width: 7px;
   background-color: #f0f0f0;
   z-index: 50;
   border-radius: 20px;
@@ -43,7 +41,7 @@ export default {
 
 .scroll-progress {
   width: 100%;
-  background: linear-gradient(to bottom,#ffff,#1FFFBC);
+  background: #1FFFBC;
   border-radius: 20px;
 
 }

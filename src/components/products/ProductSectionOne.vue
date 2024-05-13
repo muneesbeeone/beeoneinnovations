@@ -7,13 +7,13 @@
       <div class="grid gap-5 justify-center mt-5">
         <div data-aos="fade-up" ref="dnft" data-aos-duration="1000" id="dnft" data-aos-easing="ease-in-out"
           class="p-[1px] bg-gradient-to-br from-[#1D1D1D] to-[#232323] rounded-xl relative overflow-hidden">
-          <img class="absolute z-10" src="../../assets/img/bottomvector.svg" alt="">
+          <img class="absolute z-10 w-full w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
             <img class="rounded-lg md:order-2" src="../../assets/img/products/product(3).webp" alt="" />
-            <div class="p-5 space-y-5 flex flex-col justify-between order-1">
+            <div class="p-5 space-y-5 2xl:gap-36 flex flex-col justify-between order-1">
               <div class="space-y-5">
-                <h4 class="text-[#1FFFBC] text-xl font-bold font-sans">DNFT</h4>
-                <p class="text-gray-50 text-md text-justify">
+                <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl 2xl:text-4xl font-bold font-sans">DNFT</h4>
+                <p class="text-gray-50 text-md 2xl:text-xl text-justify">
                   Explore a revolutionary opportunity for the entertainment
                   sector to flourish in the face of post-pandemic obstacles with
                   the introduction of Decentralized Non-Fungible Tokens (DNFTs).
@@ -27,7 +27,7 @@
               </div>
               <div class="relative">
                 <a href="https://dnft.global"
-                  class="text-white max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
+                  class="text-white md:max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
                   <span>dnft.global</span>
                   <span class="text-2xl hover:translate-x-2 transition-all duration-1000 -mt-1">&#8594;</span>
                 </a>
@@ -37,15 +37,15 @@
         </div>
         <div data-aos="fade-up" ref="movies" data-aos-duration="1000" id="techbank" data-aos-easing="ease-in-out"
           class="p-[1px] bg-gradient-to-br from-[#1D1D1D] to-[#232323] rounded-xl relative overflow-hidden">
-          <img class="absolute z-10" src="../../assets/img/bottomvector.svg" alt="">
+          <img class="absolute z-10 w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
             <img class="rounded-lg" src="../../assets/img/products/product(2).webp" alt="" />
-            <div class="p-5 space-y-5 flex flex-col justify-between order-1">
+            <div class="p-5 space-y-5 2xl:gap-36 flex flex-col justify-between order-1">
               <div class="space-y-5">
-                <h4 class="text-[#1FFFBC] text-xl font-bold font-sans">
+                <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl font-bold font-sans">
                   TECHBANK MOVIES
                 </h4>
-                <p class="text-gray-50 text-md text-justify">
+                <p class="text-gray-50 text-md 2xl:text-xl text-justify">
                    As society progresses towards digitalization, the prominence
                   and frequency of digital wallets (DWallets) continue to soar.
                   With an online wallet or purse at your disposal, seamless and
@@ -59,7 +59,7 @@
               </div>
               <div class="relative">
                 <a href="https://techbankmovies.london"
-                  class="text-white max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
+                  class="text-white md:max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
                   <span>techbankmovies.london</span>
                   <span class="text-2xl hover:translate-x-2 transition-all duration-1000 -mt-1">&#8594;</span>
                 </a>
@@ -69,15 +69,15 @@
         </div>
         <div data-aos="fade-up" ref="dwallet" data-aos-duration="1000" id="dwallet" data-aos-easing="ease-in-out"
           class="p-[1px] bg-gradient-to-br from-[#1D1D1D] to-[#232323] rounded-xl relative overflow-hidden">
-          <img class="absolute z-10" src="../../assets/img/bottomvector.svg" alt="">
+          <img class="absolute z-10 w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
             <img class="rounded-lg md:order-2" src="../../assets/img/products/product(6).webp" alt="" />
-            <div class="p-5 space-y-5 flex flex-col justify-between order-1">
+            <div class="p-5 space-y-5 2xl:gap-36 flex flex-col justify-between order-1">
               <div class="space-y-5">
-                <h4 class="text-[#1FFFBC] text-xl font-bold font-sans">
+                <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl font-bold font-sans">
                   TECHBANK DWALLET
                 </h4>
-                <p class="text-gray-50 text-md text-justify">
+                <p class="text-gray-50 text-md 2xl:text-xl text-justify">
                    As society progresses towards digitalization, the prominence
                   and frequency of digital wallets (DWallets) continue to soar.
                   With an online wallet or purse at your disposal, seamless and
@@ -90,16 +90,16 @@
                 </p>
               </div>
               <div class="gap-5 flex flex-wrap md:flex-nowrap w-full">
-                <div class="w-full max-w-xs">
+                <div class="w-full md:max-w-xs">
                   <a href="#"
-                    class="text-white max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
+                    class="text-white md:max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
                     <span>Playstore</span>
                     <span class="text-2xl hover:translate-x-2 transition-all duration-1000 -mt-1">&#8594;</span>
                   </a>
                 </div>
-                <div class="w-full max-w-xs">
+                <div class="w-full md:max-w-xs">
                   <a href="#"
-                    class="text-white max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
+                    class="text-white md:max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
                     <span>Appstore</span>
                     <span class="text-2xl hover:translate-x-2 transition-all duration-1000 -mt-1">&#8594;</span>
                   </a>
@@ -110,13 +110,13 @@
         </div>
         <div data-aos="fade-up" ref="dbank" data-aos-duration="1000" id="dbank" data-aos-easing="ease-in-out"
           class="p-[1px] bg-gradient-to-br from-[#1D1D1D] to-[#232323] rounded-xl relative overflow-hidden">
-          <img class="absolute z-10" src="../../assets/img/bottomvector.svg" alt="">
+          <img class="absolute z-10 w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
             <img class="rounded-lg" src="../../assets/img/products/product(1).webp" alt="" />
-            <div class="p-5 space-y-5 flex flex-col justify-between order-1">
+            <div class="p-5 space-y-5 2xl:gap-36 flex flex-col justify-between order-1">
               <div class="space-y-5">
-                <h4 class="text-[#1FFFBC] text-xl font-bold font-sans">DBANK</h4>
-                <p class="text-gray-50 text-md text-justify">
+                <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl font-bold font-sans">DBANK</h4>
+                <p class="text-gray-50 text-md 2xl:text-xl text-justify">
                   Introducing DBANK, an innovative DeFi solution that combines
                   Mining, Staking, Burning, Liquidity, and Utility features into
                   one convenient platform. As a trailblazing project in
@@ -130,7 +130,7 @@
               </div>
               <div class="relative">
                 <a href="https://defeebank.io"
-                  class="text-white max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
+                  class="text-white md:max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
                   <span>defeebank.io</span>
                   <span class="text-2xl hover:translate-x-2 transition-all duration-1000 -mt-1">&#8594;</span>
                 </a>
@@ -140,15 +140,15 @@
         </div>
         <div data-aos="fade-up" ref="techbank" data-aos-duration="1000" data-aos-easing="ease-in-out"
           class="p-[1px] bg-gradient-to-br from-[#1D1D1D] to-[#232323] rounded-xl relative overflow-hidden">
-          <img class="absolute z-10" src="../../assets/img/bottomvector.svg" alt="">
+          <img class="absolute z-10 w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
             <img class="rounded-lg md:order-2" src="../../assets/img/products/product(4).webp" alt="" />
-            <div class="p-5 space-y-5 flex flex-col justify-between order-1">
+            <div class="p-5 space-y-5 2xl:gap-36 flex flex-col justify-between order-1">
               <div class="space-y-5">
-                <h4 class="text-[#1FFFBC] text-xl font-bold font-sans">
+                <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl font-bold font-sans">
                   TECHBANK
                 </h4>
-                <p class="text-gray-50 text-md text-justify">
+                <p class="text-gray-50 text-md 2xl:text-xl text-justify">
                   Cryptocurrency transactions have become commonplace, and
                   Techbank is at the forefront with its robust blockchain
                   solution. With a strong online presence across IOS, Android, and
@@ -159,16 +159,16 @@
                 </p>
               </div>
               <div class="gap-5 flex flex-wrap md:flex-nowrap w-full">
-                <div class="w-full max-w-xs">
+                <div class="w-full md:max-w-xs">
                   <a href="#"
-                    class="text-white max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
+                    class="text-white md:max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
                     <span>Playstore</span>
                     <span class="text-2xl hover:translate-x-2 transition-all duration-1000 -mt-1">&#8594;</span>
                   </a>
                 </div>
-                <div class="w-full max-w-xs">
+                <div class="w-full md:max-w-xs">
                   <a href="#"
-                    class="text-white max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
+                    class="text-white md:max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
                     <span>Appstore</span>
                     <span class="text-2xl hover:translate-x-2 transition-all duration-1000 -mt-1">&#8594;</span>
                   </a>
@@ -179,15 +179,15 @@
         </div>
         <div data-aos="fade-up" ref="bee" data-aos-duration="1000" data-aos-easing="ease-in-out"
           class="p-[1px] bg-gradient-to-br from-[#1D1D1D] to-[#232323] rounded-xl relative overflow-hidden">
-          <img class="absolute z-10" src="../../assets/img/bottomvector.svg" alt="">
+          <img class="absolute z-10 w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
             <img class="rounded-lg" src="../../assets/img/products/product(5).webp" alt="" />
-            <div class="p-5 space-y-5 flex flex-col justify-between order-1">
+            <div class="p-5 space-y-5 2xl:gap-36 flex flex-col justify-between order-1">
               <div class="space-y-5">
-                <h4 class="text-[#1FFFBC] text-xl font-bold font-sans">
+                <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl font-bold font-sans">
                   BEE INTERNATIONAL
                 </h4>
-                <p class="text-gray-50 text-md text-justify">
+                <p class="text-gray-50 text-md 2xl:text-xl text-justify">
                   Soar to new heights with Bee International, a premier service
                   provider for individuals seeking to study or reside in
                   English-speaking countries. Bee International unlocks boundless
@@ -198,7 +198,7 @@
               </div>
               <div class="relative">
                 <a href="https://beeinternational.io.com"
-                  class="text-white max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
+                  class="text-white md:max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
                   <span>beeinternational.io.com</span>
                   <span class="text-2xl hover:translate-x-2 transition-all duration-1000 -mt-1">&#8594;</span>
                 </a>
@@ -215,7 +215,7 @@ import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
 export default {
   data() { 
     return{
-      product:''
+      product:'dnft'
     }
   },
   created(){
@@ -227,10 +227,10 @@ export default {
     }),
   },
   watch:{
-    selectedProduct:{
+    product:{
       handler(){
         setTimeout(()=>{
-          const element = this.$refs[this.selectedProduct]
+          const element = this.$refs[this.product]
           element.scrollIntoView({ behavior: 'smooth' })
         },1000)
       }

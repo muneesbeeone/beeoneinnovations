@@ -33,7 +33,7 @@
           data-wf-ignore="true"
         />
         <source
-          src="./../../assets/img/beeonebanner1.mp4"
+          src="./../../assets/img/beeonebanner.mp4"
           data-wf-ignore="true"
         />
       </video>

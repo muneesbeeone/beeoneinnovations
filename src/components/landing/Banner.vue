@@ -9,7 +9,7 @@
             <div class="text-center md:text-left font-sans space-y-10">
               <div class="space-y-5" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in">
                 <h1
-                  class="font-bold sans tracking-tight text-white text-3xl md:text-3xl lg:text-5xl xl:text-7xl 2xl:text-7xl">
+                  class="font-bold sans tracking-tight text-white text-4xl md:text-3xl lg:text-5xl xl:text-7xl 2xl:text-8xl">
                   Innovation<br />starts here
                 </h1>
                 <p class="text-lg lg:text-xl leading-8 text-white">
@@ -29,12 +29,12 @@
               src="./../../assets/img/banner-img.webp" alt="" @mouseover="toggleHover" @mouseout="toggleHover" />
             <img
               class="w-[75%] md:w-[80%] md:-mt-[13rem] -mt-[7rem] md:-ml-1 -z-50 ml-[-0.3rem]  mx-auto transition-transform duration-[2000ms] transform"
-              :class="{ 'md:translate-y-5 translate-y-5 skew-x-3 skew-y-3': isHovered }"
+              :class="{ 'md:translate-y-6 translate-y-5 skew-x-3 skew-y-3': isHovered }"
               src="./../../assets/img/shadow1.png" alt="" @mouseover="toggleHover" @mouseout="toggleHover" />
           </div>
         </div>
         <div
-          class="absolute text-sm lg:text-md w-fit text-white border-l-2 px-5 pr-5 mb-10 border-white space-y-3 flex justify-end flex-col left-0">
+          class="absolute text-sm lg:text-md w-fit text-white px-5 pr-5 mb-10 space-y-3 flex justify-end flex-col left-0">
           <a href="#" target="_parent"><img src="./../../assets//icons/insta.svg" alt="" /></a>
           <a href="#" target="_blank"><img src="./../../assets/icons/facebook.svg" alt="" /></a>
 
@@ -49,7 +49,7 @@
         style="background-image: url('/src/assets/img/bannerstill.webp')" muted="" playsinline="" data-wf-ignore="true"
         data-object-fit="cover">
         <source src="./../../assets/img/beeonebanner1.webm" data-wf-ignore="true" />
-        <source src="./../../assets/img/beeonebanner1.mp4" data-wf-ignore="true" />
+        <source src="./../../assets/img/beeonebanner.mp4" data-wf-ignore="true" />
       </video>
     </div>
   </div>

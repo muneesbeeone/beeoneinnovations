@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative max-h-[1080px] md:min-h-screen min-h-auto overflow-hidden w-full lg:px-12 pt-10 lg:pt-20 sm:pt-38 justify-between items-center">
+    class="relative max-h-[1080px] 2xl:max-h-screen md:min-h-screen min-h-auto overflow-hidden w-full lg:px-12 pt-10 lg:pt-20 sm:pt-38 justify-between items-center">
     <img class="absolute left-0 -z-50 top-0 hidden md:block" src="../../assets/img/mask2.webp" alt="" />
     <img class="absolute right-0 rotate-0 -z-50 -scale-x-100 top-0" src="../../assets/img/mask2.webp" alt="" />
 
@@ -25,7 +25,7 @@
       </div>
       <div class="w-full">
         <img @mouseover="toggleHover" @mouseout="toggleHover"
-          class="w-[60%] md:w-[30%] mx-auto mt-16 md:mt-[-24] relative z-50 transition-all duration-[2000ms] hover:-translate-y-8"
+          class="w-[60%] md:w-[30%] mx-auto mt-16 md:mt-[100px] 2xl:mt-[200px] relative z-50 transition-all duration-[2000ms] hover:-translate-y-8"
           src="./../../assets/img/bee3d.webp" alt=""
           :class="{ '-translate-y-3 md:-translate-y-8 -skew-x-6': isHovered }" />
         <img @mouseover="toggleHover" @mouseout="toggleHover"

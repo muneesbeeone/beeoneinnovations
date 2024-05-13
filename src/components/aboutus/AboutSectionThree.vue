@@ -17,6 +17,13 @@
           <p class="text-sm font-thin">{{ item.designation }}</p>
         </div>
       </div>
+      <div  class="text-gray-50 space-y-3 bg-[#252525] p-2">
+        <img src="https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/next.webp" alt="">
+        <div class="space-y-1">
+          <h3 class="font-semibold">You Can Be The Next</h3>
+          <a href="/#careers" class="text-sm font-thin underline">View Latest Openings</a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -29,110 +36,110 @@ export default {
           "id": 1,
           "name": "Akhil Antony",
           "designation": "CTO",
-          "image": "/src/assets/img/team/akhilantony.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/akhilantony.webp"
         },
         {
           "id": 2,
           "name": "Suresh Kamal",
           "designation": "IT Head (India)",
-          "image": "/src/assets/img/team/suresh.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/suresh.webp"
         },
         {
           "id": 3,
           "name": "Ajeesh",
           "designation": "Backend Developer",
-          "image": "/src/assets/img/team/ajeesh.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/ajeesh.webp"
         },
         {
           "id": 4,
           "name": "Akhil",
           "designation": "IOS Developer",
-          "image": "/src/assets/img/team/akhilchandran.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/akhilchandran.webp"
         },
         {
           "id": 5,
           "name": "Sarath Raj",
           "designation": "Project Manager",
-          "image": "/src/assets/img/team/sarath.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/sarath.webp"
         },
         {
           "id": 6,
           "name": "Sharon",
           "designation": "UI/UX Designer",
-          "image": "/src/assets/img/team/sharon.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/sharon.webp"
         },
         {
           "id": 7,
           "name": "Saranya",
           "designation": "Quality Analyst",
-          "image": "/src/assets/img/team/saranya.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/saranya.webp"
         },
         {
           "id": 10,
           "name": "Aimy Vironi",
           "designation": "Human Resource",
-          "image": "/src/assets/img/team/aimy.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/aimy.webp"
         },
         {
           "id": 15,
           "name": "Syamily K Raj",
           "designation": "Human Resource",
-          "image": "/src/assets/img/team/syamily.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/syamily.webp"
         },
         {
           "id": 11,
           "name": "Muhammed Munees",
           "designation": "UI Developer",
-          "image": "/src/assets/img/team/munees.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/munees.webp"
         },
         {
           "id": 12,
           "name": "Fairooz",
           "designation": "Lead Android Developer",
-          "image": "/src/assets/img/team/fairooz.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/fairooz.webp"
         },
         {
           "id": 13,
           "name": "Arjun",
           "designation": "Android Developer",
-          "image": "/src/assets/img/team/Arjun.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/Arjun.webp"
         },
         {
           "id": 14,
           "name": "Vimal Pillai",
           "designation": "Project Coordinator",
-          "image": "/src/assets/img/team/vimal.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/vimal.webp"
         },
         {
           "id": 19,
           "name": "Prajoon",
           "designation": "Digital Marketing Manager",
-          "image": "/src/assets/img/team/prajoon.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/prajoon.webp"
         },
         {
           "id": 18,
           "name": "Akshai K",
           "designation": "IOS Developer",
-          "image": "/src/assets/img/team/akshai.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/akshai.webp"
         },
         {
           "id": 16,
           "name": "Sabir",
           "designation": "Blockchain Developer",
-          "image": "/src/assets/img/team/sabir.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/sabir.webp"
         },
         {
           "id": 17,
           "name": "Aaraamasree Sreekumar",
           "designation": "Blockchain Developer",
-          "image": "/src/assets/img/team/aaram.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/aaram.webp"
         },
-        {
-          "id": 25,
-          "name": "You Can Be The Next",
-          "designation": "View Latest Openings",
-          "image": "/src/assets/img/team/next.webp"
-        }
+        // {
+        //   "id": 25,
+        //   "name": "You Can Be The Next",
+        //   "designation": "View Latest Openings",
+        //   "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/next.webp"
+        // }
       ]
     }
   },
