@@ -9,7 +9,7 @@
           class="p-[1px] bg-gradient-to-br from-[#1D1D1D] to-[#232323] rounded-xl relative overflow-hidden">
           <img class="absolute z-10 w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
-            <img class="rounded-lg w-full h-full md:order-2" src="../../assets/img/products/product(3).webp" alt="" />
+            <img class="rounded-lg w-ful md:order-2" src="../../assets/img/products/product(3).webp" alt="" />
             <div class="p-5 space-y-5  flex flex-col justify-between order-1">
               <div class="space-y-5">
                 <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl 2xl:text-4xl font-bold font-sans">DNFT</h4>

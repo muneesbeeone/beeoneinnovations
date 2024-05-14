@@ -12,12 +12,17 @@
     <div class="grid md:grid-cols-4 grid-cols-2 gap-5 pt-10 lg:pt-20 sm:pt-38 px-3">
       <div v-for="(item, index) in team" :key="index" class="text-gray-50 space-y-3 bg-[#252525] p-2">
         <img v-if="item.image" :key="index" :src="item.image" alt="">
-        <div class="space-y-1">
-          <h3 class="font-semibold">{{ item.name }}</h3>
-          <p class="text-sm font-thin">{{ item.designation }}</p>
+        <div class="flex justify-between items-center">
+          <div class="space-y-1">
+            <h3 class="font-semibold">{{ item.name }}</h3>
+            <p class="text-sm font-thin">{{ item.designation }}</p>
+          </div>
+          <div>
+            <a href="#" target="_blank"><img src="../../assets/icons/linkedin1.svg" alt="" /></a>
+          </div>
         </div>
       </div>
-      <div  class="text-gray-50 space-y-3 bg-[#252525] p-2">
+      <div class="text-gray-50 space-y-3 bg-[#252525] p-2">
         <img src="https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/next.webp" alt="">
         <div class="space-y-1">
           <h3 class="font-semibold">You Can Be The Next</h3>
