@@ -22,7 +22,7 @@ html {
     object-fit: cover;
 }
 .overlay {
-    background: #12121262;
+    background: #0000009f;
     backdrop-filter: blur(0px);
 }
 .privacy p {
