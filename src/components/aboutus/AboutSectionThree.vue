@@ -18,7 +18,7 @@
             <p class="text-sm font-thin">{{ item.designation }}</p>
           </div>
           <div>
-            <a href="#" target="_blank"><img src="../../assets/icons/linkedin1.svg" alt="" /></a>
+            <a v-if="item.link" :href="item.link" target="_blank"><img src="../../assets/icons/linkedin1.svg" alt="" /></a>
           </div>
         </div>
       </div>
@@ -41,73 +41,85 @@ export default {
           "id": 1,
           "name": "Akhil Antony",
           "designation": "CTO",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/akhilantony.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/akhilantony.webp",
+          "link" : "https://www.linkedin.com/in/akhilantony/"
         },
         {
           "id": 2,
           "name": "Suresh Kamal",
           "designation": "IT Head (India)",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/suresh.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/suresh.webp",
+          "link" : "https://www.linkedin.com/in/sureshkamal919497337065/"
         },
         {
           "id": 3,
           "name": "Ajeesh",
           "designation": "Backend Developer",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/ajeesh.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/ajeesh.webp",
+          "link":"https://www.linkedin.com/in/ajeesh-ks-9071aa266/"
         },
         {
           "id": 4,
           "name": "Akhil",
           "designation": "IOS Developer",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/akhilchandran.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/akhilchandran.webp",
+          "link": "https://www.linkedin.com/in/akhilchandran1114/"
         },
         {
           "id": 5,
           "name": "Sarath Raj",
           "designation": "Project Manager",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/sarath.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/sarath.webp",
+          "link" : "https://www.linkedin.com/in/sarath-raj-a07b5b15b/"
         },
         {
           "id": 6,
           "name": "Sharon",
           "designation": "UI/UX Designer",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/sharon.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/sharon.webp",
+          "link":"https://www.linkedin.com/in/sharon-a-s-673439219/"
         },
         {
           "id": 7,
           "name": "Saranya",
           "designation": "Quality Analyst",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/saranya.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/saranya.webp",
+          "link":"https://www.linkedin.com/in/saranya-m-083539210/"
         },
         {
           "id": 10,
           "name": "Aimy Vironi",
           "designation": "Human Resource",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/aimy.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/aimy.webp",
+          "link":"https://www.linkedin.com/in/aimy-vironi-4494736b/"
         },
         {
           "id": 15,
           "name": "Syamily K Raj",
           "designation": "Human Resource",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/syamily.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/syamily.webp",
+          "link":"https://www.linkedin.com/in/syamily-k-raj-a0b4b2b6/"
         },
         {
           "id": 11,
           "name": "Muhammed Munees",
           "designation": "UI Developer",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/munees.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/munees.webp",
+          "link": "https://www.linkedin.com/in/muhammed-m-1b909b10b"
         },
         {
           "id": 12,
           "name": "Fairooz",
           "designation": "Lead Android Developer",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/fairooz.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/fairooz.webp",
+          "link": "https://www.linkedin.com/in/fairooz-p-1a9890206/"
         },
         {
           "id": 13,
           "name": "Arjun",
           "designation": "Android Developer",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/Arjun.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/Arjun.webp",
+          "link" : "https://www.linkedin.com/in/arjun-k-a-429b4525a/"
         },
         {
           "id": 14,
@@ -119,31 +131,36 @@ export default {
           "id": 19,
           "name": "Prajoon",
           "designation": "Digital Marketing Manager",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/prajoon.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/prajoon.webp",
+          "link":"https://www.linkedin.com/in/prajoonpk/"
         },
         {
           "id": 18,
           "name": "Akshai K",
           "designation": "IOS Developer",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/akshai1.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/akshai1.webp",
+          "link": "https://www.linkedin.com/in/akshaikunjumon"
         },
         {
           "id": 16,
           "name": "Sabir",
           "designation": "Blockchain Developer",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/sabir.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/sabir.webp",
+          "link":"https://www.linkedin.com/in/sabir-aboobaker"
         },
         {
           "id": 17,
           "name": "Aaraamasree Sreekumar",
           "designation": "Blockchain Developer",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/aaram.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/aaram.webp",
+          "link":"https://www.linkedin.com/in/aaraam/"
         },
         {
           "id": 55,
           "name": "Muhammed Sahad",
           "designation": "UI/UX Designer",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/sahad.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/sahad.webp",
+          "link": "https://www.linkedin.com/in/muhammed-sahad-77b399237"
         },
         // {
         //   "id": 25,
