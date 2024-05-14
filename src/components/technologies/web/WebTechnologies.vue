@@ -1,14 +1,14 @@
 <template>
     <div class="relative overflow-hidden border-b-2 border-[#15A77B]">
         <img class="absolute -z-10" src="../../../assets/img/tech-svg.svg" alt="">
-        <div class="px-3 py-10 lg:py-20 sm:py-38 order-1 lg:order-2 w-full flex justify-center">
+        <div class="px-3 py-10 lg:py-20  sm:py-38 order-1 lg:order-2 w-full flex justify-center">
             <div
                 class="text-center flex  flex-col justify-center items-center w-full lg:text-center font-sans space-y-12">
                 <h1
                     class="text-3xl md:text-4xl relative technology lg:text-5xl xl:text-6xl sans 2xl:text-6xl font-bold tracking-tight text-white">
                     Our Technologies
                 </h1>
-                <div class="flex flex-wrap items-center mx-auto justify-center gap-5">
+                <div class="flex flex-wrap lg:px-16 px-0 items-center mx-auto justify-center gap-5">
                     <div
                         class="rounded-full w-fit md:p-10 p-5 md:basis-auto basis-1/3  relative flex items-center justify-center text-white bg-[#1B1A1A]">
                         <img class="w-[100%]" src="../../../assets/img/web-tech/php.webp" alt="">
