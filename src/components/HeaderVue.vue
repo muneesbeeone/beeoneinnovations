@@ -6,9 +6,9 @@
       data-twe-navbar-ref>
       <div class="flex w-full flex-wrap items-center justify-between px-3">
         <div class="ms-2">
-          <a href="/#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <span @click="navigateTo('/')" class="flex items-center cursor-pointer space-x-3 rtl:space-x-reverse">
             <img src="../assets/img/Beeone.webp" class="h-8 lg:h-10" alt="Techbank Movies Logo" />
-          </a>
+          </span>
         </div>
         <!-- Hamburger button for mobile view -->
         <button

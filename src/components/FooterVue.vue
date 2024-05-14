@@ -15,14 +15,14 @@
           <div class="text-white font-bold">Extra Links</div>
           <div class="flex text-md text-white mt-5">
             <ul class="list-disc ml-5">
-              <li><a href="/#aboutus">About Us</a></li>
-              <li><a href="/#technologies">Technologies</a></li>
-              <li><a href="/#products">Products</a></li>
+              <li ><router-link to="/aboutus">About Us</router-link></li>
+              <li><router-link to="/technologies">Technologies</router-link></li>
+              <li><router-link to="/products">Products</router-link></li>
             </ul>
             <ul class="list-disc ml-7">
-              <li>Blog</li>
-              <li><a href="/#careers">Career</a></li>
-              <li><a href="/#contactus">Conduct us</a></li>
+              <li> <a href="https://beeoneinnovations.com/blogs/" target="_blank">Blog</a></li>
+              <li><router-link to="/careers">Career</router-link></li>
+              <li><router-link to="/contactus">Conduct us</router-link></li>
             </ul>
           </div>
         </div>
