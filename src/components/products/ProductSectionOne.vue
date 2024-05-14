@@ -91,7 +91,7 @@
               </div>
               <div class="gap-5 flex flex-wrap md:flex-nowrap w-full">
                 <div class="w-full md:max-w-xs">
-                  <a href="#"
+                  <a href="https://play.google.com/store/apps/details?id=com.techbank_dwallet" target="_blank"
                     class="text-white md:max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
                     <span>Playstore</span>
                     <span class="text-2xl hover:translate-x-2 transition-all duration-1000 -mt-1">&#8594;</span>
@@ -160,7 +160,7 @@
               </div>
               <div class="gap-5 flex flex-wrap md:flex-nowrap w-full">
                 <div class="w-full md:max-w-xs">
-                  <a href="#"
+                  <a href="https://play.google.com/store/apps/details?id=com.techbank"
                     class="text-white md:max-w-xs flex justify-between items-center text-right bg-[#343434] px-5 rounded-lg p-3">
                     <span>Playstore</span>
                     <span class="text-2xl hover:translate-x-2 transition-all duration-1000 -mt-1">&#8594;</span>
