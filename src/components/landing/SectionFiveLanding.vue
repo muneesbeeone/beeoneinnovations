@@ -8,7 +8,7 @@
           Our Products
         </h1>
         <div class="max-w-xl">
-          <p class="text-white 2xl:text-xl text-sm lg:text-lg md:text-md">
+          <p class="text-white 2xl:text-xl text-md lg:text-lg md:text-md">
             Discover our revolutionary products designed to transform the way
             you live, work, and play. From sleek gadgets to intuitive software
             solutions.
@@ -23,13 +23,15 @@
           <div
             class="md:max-w-[300px] 2xl:max-w-[350px] 2xl:max-w-[350px]  bg-[#000000] flex flex-col justify-between h-full space-y-2 bg-[#000000] p-1 rounded-xl">
             <img class="rounded-lg" src="../../assets/img/products/product(3).webp" alt="" />
-            <h4 class="text-white text-2xl md:text-xl font-bold font-sans">DNFT</h4>
+            <div class="p-2 flex flex-col">
+              <h4 class="text-white text-2xl md:text-xl font-bold font-sans">DNFT</h4>
             <p class="text-gray-50 text-md">
               The DNFT platform is a revolutionary advancement in the NFT space,
             </p>
             <span @click="selectProducts('dnft')" class="underline cursor-pointer text-white text-right py-2">
               learn more
             </span>
+            </div>
           </div>
         </div>
         <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1200" data-aos-easing="ease-in-out"
@@ -37,6 +39,7 @@
           <div
             class="md:max-w-[300px] 2xl:max-w-[350px] bg-[#000000] flex flex-col justify-between h-full space-y-2 bg-[#000000] p-1 rounded-xl">
             <img class="rounded-lg" src="../../assets/img/products/product(2).webp" alt="" />
+            <div class="p-2 flex flex-col">
             <h4 class="text-white text-2xl md:text-xl font-bold font-sans">
               TECHBANK MOVIES
             </h4>
@@ -47,6 +50,7 @@
             <span @click="selectProducts('movies')" class="underline cursor-pointer text-white text-right py-2">
               learn more
             </span>
+            </div>
           </div>
         </div>
         <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="2000" data-aos-easing="ease-in-out"
@@ -54,6 +58,7 @@
           <div
             class="md:max-w-[300px] 2xl:max-w-[350px] bg-[#000000] flex flex-col justify-between h-full space-y-2 bg-[#000000] p-1 rounded-xl">
             <img class="rounded-lg" src="../../assets/img/products/product(6).webp" alt="" />
+            <div class="p-2 flex flex-col">
             <h4 class="text-white text-2xl md:text-xl font-bold font-sans">
               TECHBANK DWALLET
             </h4>
@@ -63,6 +68,7 @@
             <span @click="selectProducts('dwallet')" class="underline cursor-pointer text-white text-right py-2">
               learn more
             </span>
+            </div>
           </div>
         </div>
         <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-easing="ease-in-out"
@@ -70,6 +76,7 @@
           <div
             class="md:md:max-w-[300px] 2xl:max-w-[350px] bg-[#000000] flex flex-col justify-between h-full space-y-2 bg-[#000000] p-1 rounded-xl">
             <img class="rounded-lg" src="../../assets/img/products/product(1).webp" alt="" />
+            <div class="p-2 flex flex-col">
             <h4 class="text-white text-2xl md:text-xl font-bold font-sans">DBANK</h4>
             <p class="text-gray-50 text-md">
               The world's BEST decentralized and tokenized community DeFi
@@ -78,6 +85,7 @@
             <span @click="selectProducts('dbank')" class="underline cursor-pointer text-white text-right py-2">
               learn more
             </span>
+            </div>
           </div>
         </div>
         <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1500" data-aos-easing="ease-in-out"
@@ -85,6 +93,7 @@
           <div
             class="md:md:max-w-[300px] 2xl:max-w-[350px] bg-[#000000] flex flex-col justify-between h-full space-y-2 bg-[#000000] p-1 rounded-xl">
             <img class="rounded-lg" src="../../assets/img/products/product(4).webp" alt="" />
+            <div class="p-2 flex flex-col">
             <h4 class="text-white text-2xl md:text-xl font-bold font-sans">TECHBANK</h4>
             <p class="text-gray-50 text-md">
               Buy, Sell, and manage your crypto over 60 popular Currencies in
@@ -93,12 +102,14 @@
             <span href="#" @click="selectProducts('techbank')" class="underline cursor-pointer text-white text-right py-2">
               learn more
             </span>
+            </div>
           </div>
         </div>
         <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="2000" data-aos-easing="ease-in-out"
           class="p-[1px] bg-gradient-to-br from-green-500 via-blue-200 to-purple-600 rounded-xl">
           <div class="md:md:max-w-[300px] 2xl:max-w-[350px] flex flex-col justify-between h-full space-y-2 bg-[#000000] p-1 rounded-xl">
             <img class="rounded-lg" src="../../assets/img/products/product(5).webp" alt="" />
+            <div class="p-2 flex flex-col">
             <h4 class="text-white text-2xl md:text-xl font-bold font-sans">
               BEE INTERNATIONAL
             </h4>
@@ -109,6 +120,7 @@
             <span  @click="selectProducts('bee')" class="underline cursor-pointer text-white text-right py-2">
               learn more
             </span>
+            </div>
           </div>
         </div>
       </div>

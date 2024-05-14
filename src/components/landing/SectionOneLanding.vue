@@ -13,7 +13,7 @@
             Crafting Tomorrow's Technology
           </h1>
           <div class="max-w-xl">
-            <p class="text-white 2xl:text-xl text-sm lg:text-lg md:text-md">
+            <p class="text-white 2xl:text-xl text-md lg:text-lg md:text-md">
               BeeOne Innovation pioneers transformative blockchain solutions,
               driving forward the future of technology with precision and
               creativity.

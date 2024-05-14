@@ -1,8 +1,8 @@
 <template>
   <!-- :class="[isSticky?'sticky fade-in backdrop-blur-lg':'absolute',isFadeOut?'fade-out':'fade-in']" -->
-  <header class="inset-x-0 absolute top-0 z-50 transition-all duration-1000" id="header">
+  <header class="inset-x-0 absolute top-0 z-50 transition-colors duration-1000" id="header" :class="[isSticky?'sticky fade-in pb-2 bg-black':'absolute bg-transparent',isFadeOut?'':'fade-in']">
     <nav
-      class="flex navbar px-0 md:px-5 w-full flex-nowrap items-center justify-between text-white py-5  h-full hover:text-neutral-100 focus:text-neutral-100 lg:flex-wrap lg:justify-start lg:py-2"
+      class="flex navbar px-0 md:px-5 w-full flex-nowrap  items-center justify-between text-white py-5  h-full hover:text-neutral-100 focus:text-neutral-100 lg:flex-wrap lg:justify-start lg:py-2"
       data-twe-navbar-ref>
       <div class="flex w-full flex-wrap items-center justify-between px-3">
         <div class="ms-2">
@@ -27,7 +27,7 @@
 
         <!-- Collapsible navbar container -->
         <div
-          class="!visible  transition-all hidden -mt-16 md:backdrop-blur-none backdrop-blur-xl bg-[#222222BD] md:bg-transparent rounded-cl flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
+          class="!visible w-full  transition-all hidden -mt-16 md:backdrop-blur-none backdrop-blur-xl bg-[#222222BD] md:bg-transparent rounded-cl flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto rounded-b-2xl"
           id="navbarSupportedContent3" data-twe-collapse-item>
           <!-- Left links -->
           <div class="md:hidden py-5" style="font-family: Montserrat;">
@@ -78,7 +78,7 @@
                 data-twe-nav-link-ref>Careers</router-link>
             </li>
             <!-- Blogs link -->
-            <li onclick="window.open('https://beeoneinnovations.com/blogs', '_blank')"
+            <li :class="navItemClass('https://beeoneinnovations.com/blogs')" onclick="window.open('https://beeoneinnovations.com/blogs', '_blank')"
                data-twe-collapse-init
               data-twe-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent3" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -123,7 +123,7 @@ export default {
       currentLocation: window.location.pathname,
       isFadeOut: false,
       isSticky: false,
-      scrollThreshold: 120
+      scrollThreshold: 1
     };
   },
   mounted() {
@@ -152,7 +152,7 @@ export default {
     handleScroll() {
       const header = document.getElementById("header");
       if (header) {
-        this.isFadeOut = window.scrollY >= 5;
+        this.isFadeOut = window.scrollY >= 100;
         this.isSticky = window.scrollY >= this.scrollThreshold;
       }
     },
@@ -223,5 +223,8 @@ export default {
 .fade-in {
   opacity: 10;
   transition: opacity 3s ease;
+}
+#header {
+    transition: background-color 2s; /* Adjust the duration as needed */
 }
 </style>

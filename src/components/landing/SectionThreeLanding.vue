@@ -13,7 +13,7 @@
               >
                 Next-gen Innovators
               </h1>
-              <p class="text-lg lg:text-xl leading-8 text-white">
+              <p class="text-sm lg:text-xl leading-8 text-white">
                 Embodies our dynamic team committed to pushing boundaries and
                 sparking breakthroughs. With a blend of forward-thinking vision
                 and cutting-edge expertise, we're dedicated to pioneering
