@@ -7,10 +7,10 @@
       <div class="grid gap-5 justify-center mt-5">
         <div data-aos="fade-up" ref="dnft" data-aos-duration="1000" id="dnft" data-aos-easing="ease-in-out"
           class="p-[1px] bg-gradient-to-br from-[#1D1D1D] to-[#232323] rounded-xl relative overflow-hidden">
-          <img class="absolute z-10 w-full w-full" src="../../assets/img/bottomvector.svg" alt="">
+          <img class="absolute z-10 w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
-            <img class="rounded-lg md:order-2" src="../../assets/img/products/product(3).webp" alt="" />
-            <div class="p-5 space-y-5 2xl:gap-36 flex flex-col justify-between order-1">
+            <img class="rounded-lg w-full h-full md:order-2" src="../../assets/img/products/product(3).webp" alt="" />
+            <div class="p-5 space-y-5  flex flex-col justify-between order-1">
               <div class="space-y-5">
                 <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl 2xl:text-4xl font-bold font-sans">DNFT</h4>
                 <p class="text-gray-50 text-md 2xl:text-xl text-justify">
@@ -40,7 +40,7 @@
           <img class="absolute z-10 w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
             <img class="rounded-lg" src="../../assets/img/products/product(2).webp" alt="" />
-            <div class="p-5 space-y-5 2xl:gap-36 flex flex-col justify-between order-1">
+            <div class="p-5 space-y-5  flex flex-col justify-between order-1">
               <div class="space-y-5">
                 <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl font-bold font-sans">
                   TECHBANK MOVIES
@@ -72,7 +72,7 @@
           <img class="absolute z-10 w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
             <img class="rounded-lg md:order-2" src="../../assets/img/products/product(6).webp" alt="" />
-            <div class="p-5 space-y-5 2xl:gap-36 flex flex-col justify-between order-1">
+            <div class="p-5 space-y-5  flex flex-col justify-between order-1">
               <div class="space-y-5">
                 <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl font-bold font-sans">
                   TECHBANK DWALLET
@@ -113,7 +113,7 @@
           <img class="absolute z-10 w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
             <img class="rounded-lg" src="../../assets/img/products/product(1).webp" alt="" />
-            <div class="p-5 space-y-5 2xl:gap-36 flex flex-col justify-between order-1">
+            <div class="p-5 space-y-5  flex flex-col justify-between order-1">
               <div class="space-y-5">
                 <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl font-bold font-sans">DBANK</h4>
                 <p class="text-gray-50 text-md 2xl:text-xl text-justify">
@@ -143,7 +143,7 @@
           <img class="absolute z-10 w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
             <img class="rounded-lg md:order-2" src="../../assets/img/products/product(4).webp" alt="" />
-            <div class="p-5 space-y-5 2xl:gap-36 flex flex-col justify-between order-1">
+            <div class="p-5 space-y-5  flex flex-col justify-between order-1">
               <div class="space-y-5">
                 <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl font-bold font-sans">
                   TECHBANK
@@ -182,7 +182,7 @@
           <img class="absolute z-10 w-full" src="../../assets/img/bottomvector.svg" alt="">
           <div class="z-20 relative flex flex-wrap md:flex-nowrap justify-between h-full space-y-2 p-2 rounded-xl">
             <img class="rounded-lg" src="../../assets/img/products/product(5).webp" alt="" />
-            <div class="p-5 space-y-5 2xl:gap-36 flex flex-col justify-between order-1">
+            <div class="p-5 space-y-5  flex flex-col justify-between order-1">
               <div class="space-y-5">
                 <h4 class="text-[#1FFFBC] text-xl 2xl:text-4xl font-bold font-sans">
                   BEE INTERNATIONAL

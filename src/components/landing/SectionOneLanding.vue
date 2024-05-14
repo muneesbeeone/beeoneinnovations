@@ -7,7 +7,7 @@
     <div class="px-3 order-1 lg:order-2  w-full flex justify-center" data-aos="fade" data-aos-duration="1000"
       data-aos-easing="ease-in">
       <div class="px-3 order-1 lg:order-2 w-full flex justify-center">
-        <div class="text-center flex flex-col justify-center items-center max-w-2xl lg:text-center font-sans space-y-5">
+        <div class="text-center flex flex-col justify-center items-center max-w-4xl lg:text-center font-sans space-y-5">
           <h1
             class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl sans 2xl:text-7xl font-bold tracking-tight text-white">
             Crafting Tomorrow's Technology

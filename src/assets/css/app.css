@@ -146,23 +146,23 @@ html {
   margin-left: -25px;
   margin-top: -2px;
   z-index: -10;
-  width: 52%;
+  width: 48%;
 }
 .roundedvectortwo::before {
   content: url('../img/roundlong.svg');
   position: absolute;
   margin-left: -18px;
-  margin-top: 2px;
-  z-index: -10;
+  margin-top: -2%;
+  z-index: 0;
   width: 50%;
 }
-.roundedvectorthree::before {
+.roundedvectorthree::after {
   content: url('../img/roundlong.svg');
   position: absolute;
-  margin-left: 26%;
-  margin-top: -1%;
+  margin-left: -21%;
+  margin-top: -11%;
   z-index: 0;
-  width: 30%;
+  width: 33%;
 }
 h1.product::before {
   content: url('../img/roundvector.svg');
@@ -175,9 +175,10 @@ h1.product::before {
 .technologyblock::before {
   content: url('../img/roundvector.svg');
   position: absolute;
-  margin-left: -3%;
+  margin-top: -2%;
+  margin-left: -5%;
   z-index: -10;
-  width: 20%;
+  width: 32%;
 }
 .technology::before {
   content: url('../img/roundvector.svg');
@@ -193,9 +194,9 @@ h1.product::before {
     width: 45%;
   }
   .technologyblock::before {
-    margin-left: -3%;
+    margin-left: -4%;
     z-index: -10;
-    width: 13%;
+    width: 30%;
   }
   .technology::before {
     margin-left: -5%;
@@ -207,11 +208,11 @@ h1.product::before {
     z-index: -10;
     width: 48%;
   }
-  .roundedvectorthree::before {
-    margin-top: -0.3%;
-    margin-left: 35%;
+  .roundedvectorthree::after {
+    margin-top: -12%;
+    margin-left: -13%;
     z-index: 0;
-    width: 30%;           
+    width: 40%;           
   }
   h1.product::before {
     margin-left: -5%;

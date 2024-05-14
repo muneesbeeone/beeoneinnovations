@@ -12,7 +12,7 @@
         </div>
         <!-- Hamburger button for mobile view -->
         <button
-          class="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+          class="block border-0 bg-transparent px-2 text-white hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
           type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent3"
           aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation">
           <!-- Hamburger icon -->

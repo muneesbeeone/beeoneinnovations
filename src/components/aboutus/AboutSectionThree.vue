@@ -120,7 +120,7 @@ export default {
           "id": 18,
           "name": "Akshai K",
           "designation": "IOS Developer",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/akshai.webp"
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/akshai1.webp"
         },
         {
           "id": 16,
@@ -133,6 +133,12 @@ export default {
           "name": "Aaraamasree Sreekumar",
           "designation": "Blockchain Developer",
           "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/aaram.webp"
+        },
+        {
+          "id": 55,
+          "name": "Muhammed Sahad",
+          "designation": "UI/UX Designer",
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/sahad.webp"
         },
         // {
         //   "id": 25,

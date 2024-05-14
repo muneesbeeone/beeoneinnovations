@@ -4,10 +4,12 @@
         <img class="absolute right-0 w-[25%] rotate-0 -z-50 - bottom-0" src="../../../assets/img/mask3.webp" alt="">
 
         <div class="px-3 space-y-20 relative flex flex-col">
-            <h1
-                class="text-3xl technologyblock  md:text-4xl text-center lg:text-5xl xl:text-6xl sans 2xl:text-6xl font-bold tracking-tight text-white">
+            <div class="relative w-fit mx-auto">
+                <h1
+                class="text-3xl technologyblock  md:text-4xl relative text-center lg:text-5xl xl:text-6xl sans 2xl:text-6xl font-bold tracking-tight text-white">
                 Our Technologies
             </h1>
+            </div>
             <div class="flex flex-wrap items-center mx-auto lg:px-16 px-0 justify-center gap-5">
                 <div class="rounded-full w-fit p-10 md:basis-auto basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
                     <img class="w-[100%]" src="../../../assets/img/blockchain/solidity.webp" alt="">
