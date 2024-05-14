@@ -1,7 +1,7 @@
 <template>
   <div class="relative bg-black overflow-hidden w-full lg:px-12 py-10 lg:py-20 sm:py-38 justify-between items-center">
-    <img class="absolute left-0 w-[25%] z-0 top-0" src="../../assets/img/mask2.webp" alt="">
-    <img class="absolute right-0 w-[25%] rotate-0 z-0 - bottom-0" src="../../assets/img/mask3.webp" alt="">
+    <img class="absolute left-0 w-[50%] z-0 top-0" src="../../assets/img/mask2.webp" alt="">
+    <img class="absolute right-0 w-[50%] rotate-0 z-0 - bottom-0" src="../../assets/img/mask3.webp" alt="">
 
     <div class="px-3 w-screen grid items-center grid-cols-1 md:grid-cols-2">
       <div class="text-center items-center max-w-2xl lg:text-start font-sans space-y-5">

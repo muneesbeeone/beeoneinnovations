@@ -1,7 +1,7 @@
 <template>
     <div class="relative overflow-hidden w-full border-b-2 border-[#15A77B] lg:px-12 py-10 lg:py-20 sm:py-38 justify-between items-center">
-        <img class="absolute left-0 w-[25%] -z-50 top-0" src="../../../assets/img/mask2.webp" alt="">
-        <img class="absolute right-0 w-[25%] rotate-0 -z-50 - bottom-0" src="../../../assets/img/mask3.webp" alt="">
+        <img class="absolute left-0 w-[50%] -z-50 top-0" src="../../../assets/img/mask2.webp" alt="">
+        <img class="absolute right-0 w-[50%] rotate-0 -z-50 - bottom-0" src="../../../assets/img/mask3.webp" alt="">
 
         <div class="px-3 space-y-20 relative flex flex-col">
             <div class="relative w-fit mx-auto">
