@@ -9,37 +9,37 @@
                 Our Technologies
             </h1>
             <div class="flex flex-wrap items-center mx-auto justify-center gap-5">
-                <div class="rounded-full w-fit p-10 md:basis-1/4 basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
+                <div class="rounded-full w-fit p-10 md:basis-auto basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
                     <img class="w-[100%]" src="../../../assets/img/blockchain/solidity.webp" alt="">
                     <div class="absolute text-xl">
                         Solidity
                     </div>
                 </div>
-                <div class="rounded-full w-fit p-10 md:basis-1/4 basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
+                <div class="rounded-full w-fit p-10 md:basis-auto basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
                     <img class="w-[100%]" src="../../../assets/img/blockchain/nodejs.webp" alt="">
                     <div class="absolute text-xl">
                         Node JS
                     </div>
                 </div>
-                <div class="rounded-full w-fit p-10 md:basis-1/4 basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
+                <div class="rounded-full w-fit p-10 md:basis-auto basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
                     <img class="w-[100%]" src="../../../assets/img/blockchain/rust.webp" alt="">
                     <div class="absolute text-xl">
                         Rust
                     </div>
                 </div>
-                <div class="rounded-full w-fit p-10 md:basis-1/4 basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
+                <div class="rounded-full w-fit p-10 md:basis-auto basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
                     <img class="w-[100%]" src="../../../assets/img/blockchain/go.webp" alt="">
                     <div class="absolute text-xl">
                         Go chain
                     </div>
                 </div>
-                <div class="rounded-full w-fit p-10 md:basis-1/4 basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
+                <div class="rounded-full w-fit p-10 md:basis-auto basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
                     <img class="w-[100%]" src="../../../assets/img/blockchain/laravel.webp" alt="">
                     <div class="absolute text-xl">
                         Laravel
                     </div>
                 </div>
-                <div class="rounded-full w-fit p-10 md:basis-1/4 basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
+                <div class="rounded-full w-fit p-10 md:basis-auto basis-1/3 relative flex items-center justify-center text-white bg-[#1B1A1A]">
                     <img class="w-[100%]" src="../../../assets/img/blockchain/python.webp" alt="">
                     <div class="absolute text-xl">
                         Python
