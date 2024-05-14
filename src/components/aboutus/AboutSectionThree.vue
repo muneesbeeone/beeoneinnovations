@@ -23,10 +23,10 @@
         </div>
       </div>
       <div class="text-gray-50 space-y-3 bg-[#252525] p-2">
-        <img src="https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/next.webp" alt="">
+        <img class="w-full" src="https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/next.webp" alt="">
         <div class="space-y-1">
           <h3 class="font-semibold">You Can Be The Next</h3>
-          <a href="/#careers" class="text-sm font-thin underline">View Latest Openings</a>
+          <router-link to="/careers" class="text-sm font-thin underline">View Latest Openings</router-link>
         </div>
       </div>
     </div>
