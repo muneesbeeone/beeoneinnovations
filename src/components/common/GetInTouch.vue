@@ -29,7 +29,7 @@
             heights in the digital landscape
           </p>
         </div>
-        <button type="button" class="mx-auto md:mx-0  cursor-pointer" data-twe-toggle="modal"
+        <button type="button" class="mx-auto md:mx-0 relative cursor-pointer" data-twe-toggle="modal"
           data-twe-target="#exampleModalCenter" data-twe-ripple-init data-twe-ripple-color="light">
           <img class="h-10 rounded-xl" src="./../../assets/icons/button.svg" alt="" />
         </button>
