@@ -29,35 +29,37 @@
                             </span>
                         </button>
                     </div>
+                    <form>
                     <div class="relative p-4 grid md:grid-cols-2 grid-cols-1 gap-7">
                         <div class="relative flex h-14 w-full min-w-[200px]">
-                            <input placeholder="First Name"
+                            <input placeholder="First Name" required type="text"
                                 class="peer h-full w-full border-b border-white-gray-50 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0" />
                         </div>
                         <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Second name"
+                            <input placeholder="Second name" required type="text"
                                 class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                         </div>
                         <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Email"
+                            <input placeholder="Email" required type="email"
                                 class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                         </div>
                         <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Phone"
+                            <input placeholder="Phone" required type="number"
                                 class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                         </div>
                         <div class="relative md:col-span-2 col-span-1 h-14 w-full min-w-[200px]">
-                            <textarea placeholder="Write note"
+                            <textarea placeholder="Write note" required
                                 class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"></textarea>
                         </div>
                     </div>
                     <div class="flex flex-shrink-0 flex-wrap items-center justify-end p-4">
-                        <button type="button"
+                        <button type="submit"
                             class="ms-1 inline-block rounded"
                             data-twe-ripple-init data-twe-ripple-color="light">
                             <img class="h-10" src="./../../assets/img/sendnowbtn.webp" alt="" />
                         </button>
                     </div>
+                </form>
                 </div>
             </div>
         </div>

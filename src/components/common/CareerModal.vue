@@ -32,24 +32,24 @@
                     </div>
                     <div class="relative p-4 grid md:grid-cols-2 grid-cols-1 gap-7">
                         <div class="relative flex h-14 w-full min-w-[200px]">
-                            <input placeholder="First Name"
+                            <input placeholder="First Name" required type="text"
                                 class="peer h-full w-full border-b border-white-gray-50 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0" />
                         </div>
                         <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Second name"
+                            <input placeholder="Second name" required type="text"
                                 class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                         </div>
                         <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Email"
+                            <input placeholder="Email" required type="email"
                                 class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                         </div>
                         <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Phone"
+                            <input placeholder="Phone" required type="phone"
                                 class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                         </div>
                         
                         <div class="relative h-14 w-full min-w-[200px]">
-                            <input type="file" @change="handleFileUpload" ref="fileInput" style="display: none" />
+                            <input type="file" @change="handleFileUpload" required ref="fileInput" style="display: none" />
                             <input placeholder="File"
                                 class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                                 :value="selectedFileName" readonly @click="openFilePicker" />
