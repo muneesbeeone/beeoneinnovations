@@ -48,8 +48,8 @@
       <video id="2911f215-33d8-5331-fd79-0cc1bdd219d7-video" autoplay="" loop="" class="object-cover w-screen h-full"
         style="background-image: url('/src/assets/img/bannerstill.webp')" muted="" playsinline="" data-wf-ignore="true"
         data-object-fit="cover">
-        <source src="./../../assets/img/beeonebanner1.webm" data-wf-ignore="true" />
-        <source src="./../../assets/img/beeonebanner.mp4" data-wf-ignore="true" />
+        <source src="/src/assets/img/beeonebanner1.webm" data-wf-ignore="true" />
+        <source src="/src/assets/img/beeonebanner.mp4" data-wf-ignore="true" />
       </video>
     </div>
   </div>
