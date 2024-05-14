@@ -14,9 +14,12 @@
             Beeone Innovation, where innovation meets excellence. As a product-based company, we specialize in harnessing the power of blockchain technology, mobile (iOS and Android), and web projects to drive transformative solutions. Our mission is to push the boundaries of technology, delivering cutting-edge products and services tailored to meet your needs. Discover how Beeone Innovation is shaping the future of technology with our commitment to innovation and excellence
           </p>
         </div>
-        <div class="flex justify-center w-full cursor-pointer">
-          <img class="h-10" src="./../../assets/icons/button.svg" alt="" />
-        </div>
+        <button type="button"
+                class="mx-auto hover:skew-x-3 hover:-skew-y-2 transition-all duration-1000  cursor-pointer"
+                data-twe-toggle="modal" data-twe-target="#exampleModalCenter" data-twe-ripple-init
+                data-twe-ripple-color="light">
+                <img class="h-10" src="./../../assets/icons/button.svg" alt="" />
+            </button>
       </div>
     </div>
     <div>
