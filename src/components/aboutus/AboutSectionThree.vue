@@ -152,7 +152,7 @@ export default {
           "id": 17,
           "name": "Aaraamasree Sreekumar",
           "designation": "Blockchain Developer",
-          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/aaram.webp",
+          "image": "https://0xtech-cdn.s3-eu-west-1.amazonaws.com/dwallet-referral/beeoneinnovations/araam.webp",
           "link":"https://www.linkedin.com/in/aaraam/"
         },
         {
