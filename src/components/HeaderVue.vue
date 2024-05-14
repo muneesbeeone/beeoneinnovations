@@ -1,6 +1,6 @@
 <template>
   <!-- :class="[isSticky?'sticky fade-in backdrop-blur-lg':'absolute',isFadeOut?'fade-out':'fade-in']" -->
-  <header class="inset-x-0 absolute top-0 z-50 transition-all duration-1000" id="header" >
+  <header class="inset-x-0 absolute top-0 z-50 transition-all duration-1000" id="header">
     <nav
       class="flex navbar px-0 md:px-5 w-full flex-nowrap items-center justify-between text-white py-5  h-full hover:text-neutral-100 focus:text-neutral-100 lg:flex-wrap lg:justify-start lg:py-2"
       data-twe-navbar-ref>
@@ -37,50 +37,59 @@
             class="list-style-none font-[400] relative overflow-hidden text-center ms-auto flex flex-col ps-0 lg:mt-1 lg:flex-row"
             data-twe-navbar-nav-ref>
             <!-- Home link -->
-            <li :class="navItemClass('/')" @click="navigateTo('/')" data-twe-collapse-init data-twe-target="#navbarSupportedContent3"
-          aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation">
+            <li :class="navItemClass('/')" @click="navigateTo('/')" data-twe-collapse-init
+              data-twe-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent3" aria-expanded="false"
+              aria-label="Toggle navigation">
               <router-link class="lg:px-2 cool-link" to="/" :class="isActive('/') ? 'active' : ''" aria-current="page"
                 data-twe-nav-link-ref data-twe-collapse-init data-twe-target="#navbarSupportedContent3"
-          aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation">Home</router-link>
+                aria-controls="navbarSupportedContent3" aria-expanded="false"
+                aria-label="Toggle navigation">Home</router-link>
             </li>
             <!-- Technologies link -->
-            <li :class="navItemClass('/technologies')" @click="navigateTo('/technologies')" data-twe-collapse-init data-twe-target="#navbarSupportedContent3"
-          aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation">
+            <li :class="navItemClass('/technologies')" @click="navigateTo('/technologies')" data-twe-collapse-init
+              data-twe-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent3" aria-expanded="false"
+              aria-label="Toggle navigation">
               <router-link class="text-white lg:px-2 cool-link" to="/technologies"
                 :class="isActive('/technologies') ? 'active' : ''" aria-current="page"
                 data-twe-nav-link-ref>Technologies</router-link>
             </li>
             <!-- Products link -->
-            <li :class="navItemClass('/products')" @click="navigateTo('/products')" data-twe-collapse-init data-twe-target="#navbarSupportedContent3"
-          aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation">
+            <li :class="navItemClass('/products')" @click="navigateTo('/products')" data-twe-collapse-init
+              data-twe-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent3" aria-expanded="false"
+              aria-label="Toggle navigation">
               <router-link class="text-white lg:px-2 cool-link" to="/products"
                 :class="isActive('/products') ? 'active' : ''" aria-current="page"
                 data-twe-nav-link-ref>Products</router-link>
             </li>
             <!-- About Us link -->
-            <li :class="navItemClass('/aboutus')" @click="navigateTo('/aboutus')" data-twe-collapse-init data-twe-target="#navbarSupportedContent3"
-          aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation">
+            <li :class="navItemClass('/aboutus')" @click="navigateTo('/aboutus')" data-twe-collapse-init
+              data-twe-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent3" aria-expanded="false"
+              aria-label="Toggle navigation">
               <router-link class="text-white lg:px-2 cool-link" to="/aboutus"
                 :class="isActive('/aboutus') ? 'active' : ''" aria-current="page" data-twe-nav-link-ref>About
                 us</router-link>
             </li>
             <!-- Careers link -->
-            <li :class="navItemClass('/careers')" @click="navigateTo('/careers')" data-twe-collapse-init data-twe-target="#navbarSupportedContent3"
-          aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation">
+            <li :class="navItemClass('/careers')" @click="navigateTo('/careers')" data-twe-collapse-init
+              data-twe-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent3" aria-expanded="false"
+              aria-label="Toggle navigation">
               <router-link class="text-white lg:px-2 cool-link" to="/careers"
                 :class="isActive('/careers') ? 'active' : ''" aria-current="page"
                 data-twe-nav-link-ref>Careers</router-link>
             </li>
             <!-- Blogs link -->
-            <li :class="navItemClass('https://beeoneinnovations.com/blogs/')" data-twe-collapse-init data-twe-target="#navbarSupportedContent3"
-          aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation">
+            <li onclick="window.open('https://beeoneinnovations.com/blogs', '_blank')"
+               data-twe-collapse-init
+              data-twe-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent3" aria-expanded="false"
+              aria-label="Toggle navigation">
               <a class="text-white lg:px-2 cool-link" href="https://beeoneinnovations.com/blogs/" target="_blank"
                 data-twe-nav-link-ref
-                :class="isActive('https://beeoneinnovations.com/blogs/') ? 'active' : ''">Blogs</a>
+                :class="isActive('https://beeoneinnovations.com/blogs') ? 'active' : ''">Blogs</a>
             </li>
             <!-- Contact Us button -->
-            <li :class="navItemClass('/contactus')" class="block md:hidden" @click="navigateTo('/contactus')" data-twe-collapse-init data-twe-target="#navbarSupportedContent3"
-          aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation">
+            <li :class="navItemClass('/contactus')" class="block md:hidden" @click="navigateTo('/contactus')"
+              data-twe-collapse-init data-twe-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent3"
+              aria-expanded="false" aria-label="Toggle navigation">
               <router-link class="text-white lg:px-2 cool-link" to="/contactus"
                 :class="isActive('/contactus') ? 'active' : ''" aria-current="page" data-twe-nav-link-ref>Contact
                 Us</router-link>
@@ -94,8 +103,10 @@
             </li>
           </ul>
           <div class="absolute flex justify-center w-full">
-          <button data-twe-collapse-init data-twe-target="#navbarSupportedContent3"
-          aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation" class="bg-[#222222] text-white/50 px-6 mt-2 rounded-full text-center mx-auto block md:hidden shadow-lg shadow-black/50 py-1 flex items-center"><i class="bx bx-x text-xl font-extrabold"></i>close</button>
+            <button data-twe-collapse-init data-twe-target="#navbarSupportedContent3"
+              aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation"
+              class="bg-[#222222] text-white/50 px-6 mt-2 rounded-full text-center mx-auto block md:hidden shadow-lg shadow-black/50 py-1 flex items-center"><i
+                class="bx bx-x text-xl font-extrabold"></i>close</button>
 
           </div>
         </div>
@@ -203,13 +214,14 @@ export default {
     transition: width .3s;
   }
 }
+
 .fade-out {
   opacity: 0;
   transition: opacity 2s ease;
 }
-  .fade-in {
-    opacity: 10;
-    transition: opacity 3s ease;
-  }
-  
+
+.fade-in {
+  opacity: 10;
+  transition: opacity 3s ease;
+}
 </style>
