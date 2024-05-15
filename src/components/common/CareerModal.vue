@@ -5,7 +5,7 @@
         <div data-twe-modal-dialog-ref
             class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[700px]">
             <div
-                class="pointer-events-auto relative flex w-full flex-col rounded-3xl border-none bg-[#222222DB] grid grid-cols-3 bg-clip-padding text-current shadow-4 outline-none p-5">
+                class="pointer-events-auto overflow-hidden relative flex w-full flex-col rounded-3xl border-none bg-[#222222DB] grid grid-cols-3 bg-clip-padding text-current shadow-4 outline-none p-5">
                 <div
                     class="bg-gradient-to-b relative hidden md:block backdrop-blur-2xl max-w-[180px] from-[#131313] to-[#313131] rounded-xl h-full">
                     <img class="absolute right-0 mt-20" src="../../assets/img/saly3.webp" alt="" />
@@ -73,6 +73,19 @@
                         </div>
                     </form>
                 </div>
+                <div v-show="loader" class="w-full h-full bg-black/50 backdrop-blur-md absolute">
+                    <div class="loader">
+                        <div class="square" id="sq1"></div>
+                        <div class="square" id="sq2"></div>
+                        <div class="square" id="sq3"></div>
+                        <div class="square" id="sq4"></div>
+                        <div class="square" id="sq5"></div>
+                        <div class="square" id="sq6"></div>
+                        <div class="square" id="sq7"></div>
+                        <div class="square" id="sq8"></div>
+                        <div class="square" id="sq9"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -92,7 +105,8 @@ export default {
                 phone: '',
                 jobTitle: '',
                 file: null,
-            }
+            },
+            loader:false
         }
     },
     mounted() {
@@ -114,6 +128,8 @@ export default {
 
         },
         submitForm() {
+            this.loader = true
+
             const formData = new FormData();
             let jobTitle = document.getElementById('jobTitle').value
             formData.append('firstName', this.formData.firstName);
@@ -123,13 +139,14 @@ export default {
             formData.append('jobTitle', jobTitle);
             formData.append('file', this.formData.file);
 
-            axios.post('careerEnquiry.php', formData, {
+            axios.post('/beeoneinnovations/careerEnquiry.php', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             })
                 .then(response => {
                     if (response.data.success) {
+                        this.loader = false
                         this.formData.firstName = '';
                         this.formData.lastName = '';
                         this.formData.email = '';
@@ -142,10 +159,14 @@ export default {
                         document.getElementById('closeBtnNew').click()
                     } else {
                         console.log('Failed to send email: ' + response.data.message);
+                        this.loader = false
+
                     }
                 })
                 .catch(error => {
                     console.error('Error:', error);
+                    this.loader = false
+
                 });
         }
     }

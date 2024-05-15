@@ -1,9 +1,9 @@
 <template>
-    <div data-twe-modal-init v-show="successModal"
-        class="fixed left-0 top-0 z-[1055] h-full w-full backdrop-blur-sm overflow-y-auto overflow-x-hidden outline-none"
-        id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
-        <div data-twe-modal-dialog-ref
-            class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-100 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[450px]">
+    <div v-show="successModal"
+        class="fixed left-0 top-0 z-[1055] h-full w-full  backdrop-blur-sm overflow-y-auto overflow-x-hidden outline-none"
+        id="exampleModalCenter"  aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
+        <div 
+            class="pointer-events-none relative overflow-hidden  flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-100 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[450px]">
             <div
                 class="pointer-events-auto relative flex flex-col w-full rounded-3xl border-none bg-[#222222DB] bg-clip-padding text-current shadow-4 outline-none p-5">
                 <div
@@ -22,7 +22,9 @@
                     </div>
                 </div>
             </div>
+          
         </div>
+
     </div>
 </template>
 <script>
@@ -58,3 +60,73 @@ export default {
     },
 };
 </script>
+<style>
+@keyframes loader_5191 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.square {
+  background: #ddd;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -5px;
+}
+
+#sq1 {
+  margin-top: -25px;
+  margin-left: -25px;
+  animation: loader_5191 675ms ease-in-out 0s infinite alternate;
+}
+
+#sq2 {
+  margin-top: -25px;
+  animation: loader_5191 675ms ease-in-out 75ms infinite alternate;
+}
+
+#sq3 {
+  margin-top: -25px;
+  margin-left: 15px;
+  animation: loader_5191 675ms ease-in-out 150ms infinite;
+}
+
+#sq4 {
+  margin-left: -25px;
+  animation: loader_5191 675ms ease-in-out 225ms infinite;
+}
+
+#sq5 {
+  animation: loader_5191 675ms ease-in-out 300ms infinite;
+}
+
+#sq6 {
+  margin-left: 15px;
+  animation: loader_5191 675ms ease-in-out 375ms infinite;
+}
+
+#sq7 {
+  margin-top: 15px;
+  margin-left: -25px;
+  animation: loader_5191 675ms ease-in-out 450ms infinite;
+}
+
+#sq8 {
+  margin-top: 15px;
+  animation: loader_5191 675ms ease-in-out 525ms infinite;
+}
+
+#sq9 {
+  margin-top: 15px;
+  margin-left: 15px;
+  animation: loader_5191 675ms ease-in-out 600ms infinite;
+}
+</style>

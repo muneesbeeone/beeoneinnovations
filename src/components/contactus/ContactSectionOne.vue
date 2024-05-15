@@ -81,7 +81,7 @@ export default {
         };
 
         // Make the POST request
-        const response = await axios.post("sendEmail.php", formData, {
+        const response = await axios.post("/beeoneinnovations/sendEmail.php", formData, {
           headers: {
             "Content-Type": "application/json",
           },

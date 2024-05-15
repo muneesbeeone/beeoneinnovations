@@ -1,17 +1,14 @@
 <template>
-  <div
-    id="app"
-    class="h-auto max-w-[1920px] mx-auto transition-all duration-1000"
-  >
+  <div id="app" class="h-auto max-w-[1920px] mx-auto transition-all duration-1000">
     <header-vue />
     <transition name="fade">
       <router-view></router-view>
     </transition>
-    <enquiry-modal/>
-    <career-modal/>
+    <enquiry-modal />
+    <career-modal />
     <scroll-progres />
     <footer-vue />
-    <success-modal/>
+    <success-modal />
   </div>
 </template>
 
@@ -39,4 +36,5 @@ export default {
 </script>
 
 <style>
+
 </style>

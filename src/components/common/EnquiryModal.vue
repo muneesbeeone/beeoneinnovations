@@ -5,7 +5,7 @@
         <div data-twe-modal-dialog-ref
             class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[700px]">
             <div
-                class="pointer-events-auto relative flex w-full flex-col rounded-3xl border-none bg-[#222222DB] grid grid-cols-3 bg-clip-padding text-current shadow-4 outline-none p-5">
+                class="pointer-events-auto relative overflow-hidden flex w-full flex-col rounded-3xl border-none bg-[#222222DB] grid grid-cols-3 bg-clip-padding text-current shadow-4 outline-none p-5">
                 <div
                     class="bg-gradient-to-b relative hidden md:block backdrop-blur-2xl max-w-[180px] from-[#131313] to-[#313131] rounded-xl h-full">
                     <img class="absolute right-0 -mr-8 mt-10" src="../../assets/img/saly2.webp" alt="" />
@@ -61,7 +61,21 @@
                         </div>
                     </form>
                 </div>
+                <div v-show="loader" class="w-full h-full bg-black/50 backdrop-blur-md absolute">
+                    <div class="loader">
+                        <div class="square" id="sq1"></div>
+                        <div class="square" id="sq2"></div>
+                        <div class="square" id="sq3"></div>
+                        <div class="square" id="sq4"></div>
+                        <div class="square" id="sq5"></div>
+                        <div class="square" id="sq6"></div>
+                        <div class="square" id="sq7"></div>
+                        <div class="square" id="sq8"></div>
+                        <div class="square" id="sq9"></div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 </template>
@@ -75,7 +89,8 @@ export default {
             lastName: '',
             email: '',
             phone: '',
-            note: ''
+            note: '',
+            loader:false
         };
     },
     mounted() {
@@ -86,6 +101,7 @@ export default {
     },
     methods: {
         async submitForm() {
+            this.loader = true
             try {
                 const formData = {
                     abt_first_name: this.firstName,
@@ -96,13 +112,15 @@ export default {
                 };
 
                 // Make the POST request
-                const response = await axios.post("sendEmail.php", formData, {
+                const response = await axios.post("/beeoneinnovations/sendEmail.php", formData, {
                     headers: {
                         "Content-Type": "application/json",
                     },
                 });
                 if (response.status) {
                     // Reset form fields
+                    this.loader = false
+
                     this.firstName = '';
                     this.lastName = '';
                     this.email = '';
@@ -111,15 +129,85 @@ export default {
                     this.$store.dispatch('successModal', true);
                     setTimeout(() => {
                         this.$store.dispatch('successModal', false);
-                    },2000)
+                    }, 2000)
                     document.getElementById('closeBtn').click()
                 }
 
-
             } catch (error) {
+                this.loader = false
                 console.error('Error submitting form:', error);
             }
         }
     }
 };
 </script>
+<style>
+@keyframes loader_5191 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.square {
+    background: #ddd;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+#sq1 {
+    margin-top: -25px;
+    margin-left: -25px;
+    animation: loader_5191 675ms ease-in-out 0s infinite alternate;
+}
+
+#sq2 {
+    margin-top: -25px;
+    animation: loader_5191 675ms ease-in-out 75ms infinite alternate;
+}
+
+#sq3 {
+    margin-top: -25px;
+    margin-left: 15px;
+    animation: loader_5191 675ms ease-in-out 150ms infinite;
+}
+
+#sq4 {
+    margin-left: -25px;
+    animation: loader_5191 675ms ease-in-out 225ms infinite;
+}
+
+#sq5 {
+    animation: loader_5191 675ms ease-in-out 300ms infinite;
+}
+
+#sq6 {
+    margin-left: 15px;
+    animation: loader_5191 675ms ease-in-out 375ms infinite;
+}
+
+#sq7 {
+    margin-top: 15px;
+    margin-left: -25px;
+    animation: loader_5191 675ms ease-in-out 450ms infinite;
+}
+
+#sq8 {
+    margin-top: 15px;
+    animation: loader_5191 675ms ease-in-out 525ms infinite;
+}
+
+#sq9 {
+    margin-top: 15px;
+    margin-left: 15px;
+    animation: loader_5191 675ms ease-in-out 600ms infinite;
+}
+</style>

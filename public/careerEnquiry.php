@@ -50,7 +50,7 @@ try {
    $mail->isHTML(true);
 
    $mail->Subject = 'Beeoninnovations web enquiry from :' . $name;
-   $mail->Body    = '<b> Name: ' . $name . ' ' . $lastName .'</b><br>
+   $mail->Body    = '<b> Name: ' . $firstname . ' ' . $lastname .'</b><br>
    <b>Email: ' . $email . '</b><br>
    <b>Phone Number: ' . $phone_number . '</b><br>
    <b>Designation: ' . $message . '</b><br>';
