@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "axios": "^1.6.8",
     "gsap": "^3.12.5",
     "tw-elements": "^2.0.0",
     "vue": "^3.4.21",

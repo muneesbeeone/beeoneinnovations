@@ -16,7 +16,8 @@
                         <h5 class="text-3xl font-medium leading-normal text-white" id="exampleModalCenterTitle">
                             Let's talk
                         </h5>
-                        <img class="absolute h-28 -hue-rotate-45 -rotate-[28deg] left-[11rem] top-5 block md:hidden" src="../../assets/img/saly2.webp" alt="">
+                        <img class="absolute h-28 -hue-rotate-45 -rotate-[28deg] left-[11rem] top-5 block md:hidden"
+                            src="../../assets/img/saly2.webp" alt="">
                         <!-- Close button -->
                         <button type="button"
                             class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
@@ -29,37 +30,36 @@
                             </span>
                         </button>
                     </div>
-                    <form>
-                    <div class="relative p-4 grid md:grid-cols-2 grid-cols-1 gap-7">
-                        <div class="relative flex h-14 w-full min-w-[200px]">
-                            <input placeholder="First Name" required type="text"
-                                class="peer h-full w-full border-b border-white-gray-50 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0" />
+                    <form @submit.prevent="submitForm">
+                        <div class="relative p-4 grid md:grid-cols-2 grid-cols-1 gap-7">
+                            <div class="relative flex h-14 w-full min-w-[200px]">
+                                <input v-model="firstName" placeholder="First Name" required type="text"
+                                    class="peer h-full w-full border-b border-white-gray-50 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0" />
+                            </div>
+                            <div class="relative h-14 w-full min-w-[200px]">
+                                <input v-model="lastName" placeholder="Second name" required type="text"
+                                    class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
+                            </div>
+                            <div class="relative h-14 w-full min-w-[200px]">
+                                <input v-model="email" placeholder="Email" required type="email"
+                                    class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
+                            </div>
+                            <div class="relative h-14 w-full min-w-[200px]">
+                                <input v-model="phone" placeholder="Phone" required type="number"
+                                    class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
+                            </div>
+                            <div class="relative md:col-span-2 col-span-1 h-14 w-full min-w-[200px]">
+                                <textarea v-model="note" placeholder="Write note" required
+                                    class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"></textarea>
+                            </div>
                         </div>
-                        <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Second name" required type="text"
-                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
+                        <div class="flex flex-shrink-0 flex-wrap items-center justify-end p-4">
+                            <button type="submit" class="ms-1 inline-block rounded" data-twe-ripple-init
+                                data-twe-ripple-color="light">
+                                <img class="h-10" src="./../../assets/img/sendnowbtn.webp" alt="" />
+                            </button>
                         </div>
-                        <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Email" required type="email"
-                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
-                        </div>
-                        <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Phone" required type="number"
-                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
-                        </div>
-                        <div class="relative md:col-span-2 col-span-1 h-14 w-full min-w-[200px]">
-                            <textarea placeholder="Write note" required
-                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"></textarea>
-                        </div>
-                    </div>
-                    <div class="flex flex-shrink-0 flex-wrap items-center justify-end p-4">
-                        <button type="submit"
-                            class="ms-1 inline-block rounded"
-                            data-twe-ripple-init data-twe-ripple-color="light">
-                            <img class="h-10" src="./../../assets/img/sendnowbtn.webp" alt="" />
-                        </button>
-                    </div>
-                </form>
+                    </form>
                 </div>
             </div>
         </div>
@@ -67,12 +67,47 @@
 </template>
 <script>
 import { Modal, Ripple, initTWE } from "tw-elements";
+import axios from 'axios';
 export default {
+    data() {
+        return {
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            note: ''
+        };
+    },
     mounted() {
         initTWE({
             Modal,
             Ripple,
         });
     },
+    methods: {
+        async submitForm() {
+            try {
+                const formData = {
+                    abt_first_name: this.firstName,
+                    abt_last_name: this.lastName,
+                    abt_email: this.email,
+                    abt_cell: this.phone,
+                    abt_message: this.note
+                };
+                // axios.post('https://beeoneinnovations.com/contactmail.php', formData, {
+                //     withCredentials: true
+                // });
+                console.log('Form submitted successfully:', response.data);
+                // Optionally, reset the form fields after successful submission
+                this.firstName = '';
+                this.lastName = '';
+                this.email = '';
+                this.phone = '';
+                this.note = '';
+            } catch (error) {
+                console.error('Error submitting form:', error);
+            }
+        }
+    }
 };
 </script>
