@@ -19,7 +19,7 @@
                         <img class="absolute h-28 -hue-rotate-45 -rotate-[28deg] left-[11rem] top-5 block md:hidden"
                             src="../../assets/img/saly2.webp" alt="">
                         <!-- Close button -->
-                        <button type="button"
+                        <button type="button" id="closeBtn"
                             class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
                             data-twe-modal-dismiss aria-label="Close">
                             <span class="[&>svg]:h-6 [&>svg]:w-6">
@@ -94,16 +94,28 @@ export default {
                     abt_cell: this.phone,
                     abt_message: this.note
                 };
-                // axios.post('https://beeoneinnovations.com/contactmail.php', formData, {
-                //     withCredentials: true
-                // });
-                console.log('Form submitted successfully:', response.data);
-                // Optionally, reset the form fields after successful submission
-                this.firstName = '';
-                this.lastName = '';
-                this.email = '';
-                this.phone = '';
-                this.note = '';
+
+                // Make the POST request
+                const response = await axios.post("sendEmail.php", formData, {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                });
+                if (response.status) {
+                    // Reset form fields
+                    this.firstName = '';
+                    this.lastName = '';
+                    this.email = '';
+                    this.phone = '';
+                    this.note = '';
+                    this.$store.dispatch('successModal', true);
+                    setTimeout(() => {
+                        this.$store.dispatch('successModal', false);
+                    },2000)
+                    document.getElementById('closeBtn').click()
+                }
+
+
             } catch (error) {
                 console.error('Error submitting form:', error);
             }

@@ -22,7 +22,7 @@
         autoplay=""
         loop=""
         class="object-cover w-full h-full"
-        style="background-image: url('/src/assets/img/bannerstill.webp')"
+        style="background-image: url('./src/assets/img/bannerstill.webp');background-size: cover;"
         muted=""
         playsinline=""
         data-wf-ignore="true"

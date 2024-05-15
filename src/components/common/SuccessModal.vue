@@ -1,5 +1,5 @@
 <template>
-    <div data-twe-modal-init
+    <div data-twe-modal-init v-show="successModal"
         class="fixed left-0 top-0 z-[1055] h-full w-full backdrop-blur-sm overflow-y-auto overflow-x-hidden outline-none"
         id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
         <div data-twe-modal-dialog-ref
@@ -27,12 +27,34 @@
 </template>
 <script>
 import { Modal, Ripple, initTWE } from "tw-elements";
+import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
+
 export default {
+    data() {
+        return {
+            showSuccessModal: false
+        }
+    },
     mounted() {
         initTWE({
             Modal,
             Ripple,
         });
+    },
+    computed: {
+        ...mapState({
+            successModal: 'successModal',
+        }),
+    },
+    watch: {
+        successModal: {
+            handler() {
+                this.showSuccessModal = this.successModal
+            }
+        }
+    },
+    created() {
+        this.showSuccessModal = this.successModal
     },
 };
 </script>

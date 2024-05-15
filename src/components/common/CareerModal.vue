@@ -19,7 +19,7 @@
                         <img class="absolute h-28 -hue-rotate-45 left-[11rem] top-5 block md:hidden"
                             src="../../assets/img/saly3.webp" alt="">
                         <!-- Close button -->
-                        <button type="button"
+                        <button type="button" id="closeBtnNew"
                             class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
                             data-twe-modal-dismiss aria-label="Close">
                             <span class="[&>svg]:h-6 [&>svg]:w-6">
@@ -30,45 +30,48 @@
                             </span>
                         </button>
                     </div>
-                    <div class="relative p-4 grid md:grid-cols-2 grid-cols-1 gap-7">
-                        <div class="relative flex h-14 w-full min-w-[200px]">
-                            <input placeholder="First Name" required type="text"
-                                class="peer h-full w-full border-b border-white-gray-50 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0" />
+                    <form @submit.prevent="submitForm">
+                        <div class="relative p-4 grid md:grid-cols-2 grid-cols-1 gap-7">
+                            <div class="relative flex h-14 w-full min-w-[200px]">
+                                <input v-model="formData.firstName" placeholder="First Name" required type="text"
+                                    class="peer h-full w-full border-b border-white-gray-50 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0" />
+                            </div>
+                            <div class="relative h-14 w-full min-w-[200px]">
+                                <input v-model="formData.lastName" placeholder="Last Name" required type="text"
+                                    class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
+                            </div>
+                            <div class="relative h-14 w-full min-w-[200px]">
+                                <input v-model="formData.email" placeholder="Email" required type="email"
+                                    class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
+                            </div>
+                            <div class="relative h-14 w-full min-w-[200px]">
+                                <input v-model="formData.phone" placeholder="Phone" required type="phone"
+                                    class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
+                            </div>
+                            <div class="relative h-14 w-full min-w-[200px]">
+                                <input type="file" @change="handleFileUpload" required ref="fileInput"
+                                    style="display: none" accept="application/pdf" />
+                                <input placeholder="File"
+                                    class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                                    :value="selectedFileName" readonly @click="openFilePicker" />
+                                <i class="absolute bottom-3 right-1 bx bx-upload text-white"
+                                    @click="openFilePicker"></i>
+                            </div>
+                            <div class="relative h-14 w-full min-w-[200px]">
+                                <select id="jobTitle" placeholder="Job Title"
+                                    class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
+                                    <option class="text-black" value="Product Designer">Product Designer</option>
+                                    <option class="text-black" value="Manual Tester">Manual Tester</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Second name" required type="text"
-                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
+                        <div class="flex flex-shrink-0 flex-wrap items-center justify-end p-4">
+                            <button type="submit" class="ms-1 inline-block rounded" data-twe-ripple-init
+                                data-twe-ripple-color="light">
+                                <img class="h-10" src="./../../assets/img/apply-large-btn.svg" alt="" />
+                            </button>
                         </div>
-                        <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Email" required type="email"
-                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
-                        </div>
-                        <div class="relative h-14 w-full min-w-[200px]">
-                            <input placeholder="Phone" required type="phone"
-                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
-                        </div>
-                        
-                        <div class="relative h-14 w-full min-w-[200px]">
-                            <input type="file" @change="handleFileUpload" required ref="fileInput" style="display: none" />
-                            <input placeholder="File"
-                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-                                :value="selectedFileName" readonly @click="openFilePicker" />
-                            <i class="absolute bottom-3 right-1 bx bx-upload text-white" @click="openFilePicker"></i>
-                        </div>
-                        <div class="relative h-14 w-full min-w-[200px]">
-                            <select placeholder="Email"
-                                class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
-                                <option class="text-black" value="Product Designer">Product Designer</option>
-                                <option class="text-black" value="Manual Tester">Manual Tester</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="flex flex-shrink-0 flex-wrap items-center justify-end p-4">
-                        <button type="button" class="ms-1 inline-block rounded" data-twe-ripple-init
-                            data-twe-ripple-color="light">
-                            <img class="h-10" src="./../../assets/img/apply-large-btn.svg" alt="" />
-                        </button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -76,11 +79,20 @@
 </template>
 <script>
 import { Modal, Ripple, initTWE } from "tw-elements";
+import axios from 'axios';
 export default {
     data() {
         return {
             selectedFile: null,
-            selectedFileName: 'Upload Resume...'
+            selectedFileName: 'Upload Resume...',
+            formData: {
+                firstName: '',
+                lastName: '',
+                email: '',
+                phone: '',
+                jobTitle: '',
+                file: null,
+            }
         }
     },
     mounted() {
@@ -95,10 +107,46 @@ export default {
         },
         handleFileUpload(event) {
             const file = event.target.files[0];
+            this.formData.file = event.target.files[0];
             this.selectedFile = file;
             this.selectedFileName = file ? file.name : 'Choose file...';
             // Here you can implement your file upload logic
 
+        },
+        submitForm() {
+            const formData = new FormData();
+            let jobTitle = document.getElementById('jobTitle').value
+            formData.append('firstName', this.formData.firstName);
+            formData.append('lastName', this.formData.lastName);
+            formData.append('email', this.formData.email);
+            formData.append('phone', this.formData.phone);
+            formData.append('jobTitle', jobTitle);
+            formData.append('file', this.formData.file);
+
+            axios.post('careerEnquiry.php', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
+                .then(response => {
+                    if (response.data.success) {
+                        this.formData.firstName = '';
+                        this.formData.lastName = '';
+                        this.formData.email = '';
+                        this.formData.phone = '';
+                        this.formData.file = null;
+                        this.$store.dispatch('successModal', true);
+                        setTimeout(() => {
+                            this.$store.dispatch('successModal', false);
+                        }, 2000)
+                        document.getElementById('closeBtnNew').click()
+                    } else {
+                        console.log('Failed to send email: ' + response.data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
         }
     }
 }

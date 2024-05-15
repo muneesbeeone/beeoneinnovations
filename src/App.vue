@@ -11,7 +11,7 @@
     <career-modal/>
     <scroll-progres />
     <footer-vue />
-    <!-- <success-modal/> -->
+    <success-modal/>
   </div>
 </template>
 

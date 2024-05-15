@@ -28,16 +28,21 @@
             </div>
           </div>
         </div>
-        <div class="w-full md:pl-10 pl-0 md:ml-5 ml-0 md:border-l-[1px] border-l-0 space-y-5 border-white/50 md:order-2 order-1">
+        <div
+          class="w-full md:pl-10 pl-0 md:ml-5 ml-0 md:border-l-[1px] border-l-0 space-y-5 border-white/50 md:order-2 order-1">
           <h2 class="text-3xl text-white font-thin">Get In touch</h2>
-          <form class="contact-form grid grid-cols-2 gap-5 w-full">
-            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="First Name" type="text" name="" id="">
-            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Second name" type="text" name="" id="">
-            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Email" type="email" name="" id="">
-            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Phone" type="text" name="" id="">
-            <textarea class="py-3 rounded-md col-span-2 bg-[#262626] text-white px-3" placeholder="Write note" name="" id=""></textarea>
+          <form @submit.prevent="submitForm" class="contact-form grid grid-cols-2 gap-5 w-full">
+            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="First Name" required type="text"
+              v-model="firstName">
+            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Second name" required type="text"
+              v-model="lastName">
+            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Email" required type="email"
+              v-model="email">
+            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Phone" required type="text" v-model="phone">
+            <textarea class="py-3 rounded-md col-span-2 bg-[#262626] text-white px-3" placeholder="Write note"
+              v-model="note"></textarea>
             <div class="col-span-2 flex md:justify-end justify-center">
-            <button ><img class="h-14" src="../../assets/img/apply-large-btn.svg" alt=""></button>
+              <button type="submit"><img class="h-14" src="../../assets/img/apply-large-btn.svg" alt=""></button>
             </div>
           </form>
         </div>
@@ -53,12 +58,49 @@ export default {
       isHovered: false,
       isOpeningOne: true,
       isOpeningTwo: true,
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      note: ''
     };
   },
   methods: {
     toggleHover() {
       this.isHovered = !this.isHovered;
     },
+
+    async submitForm() {
+      try {
+        const formData = {
+          abt_first_name: this.firstName,
+          abt_last_name: this.lastName,
+          abt_email: this.email,
+          abt_cell: this.phone,
+          abt_message: this.note
+        };
+
+        // Make the POST request
+        const response = await axios.post("sendEmail.php", formData, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        if (response.status) {
+          this.$store.dispatch('successModal', true);
+          setTimeout(() => {
+            this.$store.dispatch('successModal', false);
+          }, 2000)
+          this.firstName = '';
+          this.lastName = '';
+          this.email = '';
+          this.phone = '';
+          this.note = '';
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+      }
+    }
   },
 };
 </script>
