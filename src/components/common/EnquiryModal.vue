@@ -90,7 +90,7 @@ export default {
             email: '',
             phone: '',
             note: '',
-            loader:false
+            loader: false
         };
     },
     mounted() {
@@ -112,7 +112,7 @@ export default {
                 };
 
                 // Make the POST request
-                const response = await axios.post("/beeoneinnovations/sendEmail.php", formData, {
+                const response = await axios.post("sendEmail.php", formData, {
                     headers: {
                         "Content-Type": "application/json",
                     },
@@ -131,10 +131,14 @@ export default {
                         this.$store.dispatch('successModal', false);
                     }, 2000)
                     document.getElementById('closeBtn').click()
+                } else {
+                    document.getElementById('closeBtn').click()
+                    this.loader = false
                 }
 
             } catch (error) {
                 this.loader = false
+                document.getElementById('closeBtn').click()
                 console.error('Error submitting form:', error);
             }
         }

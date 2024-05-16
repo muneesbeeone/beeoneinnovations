@@ -3,7 +3,7 @@
     <img class="absolute left-0 -z-50 top-0 hidden md:block" src="../../assets/img/mask2.webp" alt="" />
     <img class="absolute right-0 rotate-0 -z-50 -scale-x-100 top-0" src="../../assets/img/mask2.webp" alt="" />
     <div class="px-3 md:px-12">
-      <div class="bg-[#171717] flex flex-wrap md:flex-nowrap rounded-xl md:p-10 p-3">
+      <div class="bg-[#171717] relative flex flex-wrap md:flex-nowrap rounded-xl md:p-10 p-3">
         <div class="w-full flex flex-col space-y-5 justify-between max-w-sm md:order-1 order-2">
           <a href="/" class="mx-auto pt-5 md:mx-0">
             <img src="../../assets/img/Beeone.webp" class="h-8 lg:h-12" alt="beeone Movies Logo" />
@@ -29,7 +29,20 @@
           </div>
         </div>
         <div
-          class="w-full md:pl-10 pl-0 md:ml-5 ml-0 md:border-l-[1px] border-l-0 space-y-5 border-white/50 md:order-2 order-1">
+          class="w-full md:pl-10 relative pl-0 md:ml-5 ml-0 md:border-l-[1px] border-l-0 space-y-5 border-white/50 md:order-2 order-1">
+          <div v-show="loader" class="absolute flex justify-center items-center w-full h-full">
+            <div class="loader bg-black/20 h-28 w-28 rounded-2xl shadow-xl shadow-black/50 backdrop-blur-sm">
+              <div class="square" id="sq1"></div>
+              <div class="square" id="sq2"></div>
+              <div class="square" id="sq3"></div>
+              <div class="square" id="sq4"></div>
+              <div class="square" id="sq5"></div>
+              <div class="square" id="sq6"></div>
+              <div class="square" id="sq7"></div>
+              <div class="square" id="sq8"></div>
+              <div class="square" id="sq9"></div>
+            </div>
+          </div>
           <h2 class="text-3xl text-white font-thin">Get In touch</h2>
           <form @submit.prevent="submitForm" class="contact-form grid grid-cols-2 gap-5 w-full">
             <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="First Name" required type="text"
@@ -38,13 +51,15 @@
               v-model="lastName">
             <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Email" required type="email"
               v-model="email">
-            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Phone" required type="text" v-model="phone">
+            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Phone" required type="text"
+              v-model="phone">
             <textarea class="py-3 rounded-md col-span-2 bg-[#262626] text-white px-3" placeholder="Write note"
               v-model="note"></textarea>
             <div class="col-span-2 flex md:justify-end justify-center">
               <button type="submit"><img class="h-14" src="../../assets/img/apply-large-btn.svg" alt=""></button>
             </div>
           </form>
+
         </div>
       </div>
     </div>
@@ -62,7 +77,8 @@ export default {
       lastName: '',
       email: '',
       phone: '',
-      note: ''
+      note: '',
+      loader:false
     };
   },
   methods: {
@@ -71,6 +87,7 @@ export default {
     },
 
     async submitForm() {
+      this.loader = true;
       try {
         const formData = {
           abt_first_name: this.firstName,
@@ -81,12 +98,13 @@ export default {
         };
 
         // Make the POST request
-        const response = await axios.post("/beeoneinnovations/sendEmail.php", formData, {
+        const response = await axios.post("sendEmail.php", formData, {
           headers: {
             "Content-Type": "application/json",
           },
         });
         if (response.status) {
+          this.loader = false;
           this.$store.dispatch('successModal', true);
           setTimeout(() => {
             this.$store.dispatch('successModal', false);
@@ -96,11 +114,84 @@ export default {
           this.email = '';
           this.phone = '';
           this.note = '';
+        }else{
+          this.loader = false;
         }
       } catch (error) {
+        this.loader = false;
         console.error('Error submitting form:', error);
       }
     }
   },
 };
 </script>
+<style>
+@keyframes loader_5191 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.square {
+  background: #ddd;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -5px;
+}
+
+#sq1 {
+  margin-top: -25px;
+  margin-left: -25px;
+  animation: loader_5191 675ms ease-in-out 0s infinite alternate;
+}
+
+#sq2 {
+  margin-top: -25px;
+  animation: loader_5191 675ms ease-in-out 75ms infinite alternate;
+}
+
+#sq3 {
+  margin-top: -25px;
+  margin-left: 15px;
+  animation: loader_5191 675ms ease-in-out 150ms infinite;
+}
+
+#sq4 {
+  margin-left: -25px;
+  animation: loader_5191 675ms ease-in-out 225ms infinite;
+}
+
+#sq5 {
+  animation: loader_5191 675ms ease-in-out 300ms infinite;
+}
+
+#sq6 {
+  margin-left: 15px;
+  animation: loader_5191 675ms ease-in-out 375ms infinite;
+}
+
+#sq7 {
+  margin-top: 15px;
+  margin-left: -25px;
+  animation: loader_5191 675ms ease-in-out 450ms infinite;
+}
+
+#sq8 {
+  margin-top: 15px;
+  animation: loader_5191 675ms ease-in-out 525ms infinite;
+}
+
+#sq9 {
+  margin-top: 15px;
+  margin-left: 15px;
+  animation: loader_5191 675ms ease-in-out 600ms infinite;
+}
+</style>

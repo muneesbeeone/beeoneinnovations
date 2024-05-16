@@ -139,7 +139,7 @@ export default {
             formData.append('jobTitle', jobTitle);
             formData.append('file', this.formData.file);
 
-            axios.post('/beeoneinnovations/careerEnquiry.php', formData, {
+            axios.post('careerEnquiry.php', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -160,12 +160,14 @@ export default {
                     } else {
                         console.log('Failed to send email: ' + response.data.message);
                         this.loader = false
+                        document.getElementById('closeBtnNew').click()
 
                     }
                 })
                 .catch(error => {
                     console.error('Error:', error);
                     this.loader = false
+                    document.getElementById('closeBtnNew').click()
 
                 });
         }
