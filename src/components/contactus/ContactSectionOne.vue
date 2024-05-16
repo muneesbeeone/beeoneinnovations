@@ -53,7 +53,7 @@
               v-model="email">
             <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Phone" required type="text"
               v-model="phone">
-            <textarea class="py-3 rounded-md col-span-2 bg-[#262626] text-white px-3" placeholder="Write note"
+            <textarea class="py-3 rounded-md col-span-2 bg-[#262626] required text-white px-3" placeholder="Write note"
               v-model="note"></textarea>
             <div class="col-span-2 flex md:justify-end justify-center">
               <button type="submit"><img class="h-14" src="../../assets/img/apply-large-btn.svg" alt=""></button>
