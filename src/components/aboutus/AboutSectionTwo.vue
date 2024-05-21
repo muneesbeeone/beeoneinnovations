@@ -1,4 +1,4 @@
-<template>
+    <template>
   <div class="relative overflow-hidden h-full w-full justify-center  items-center">
     <img class="absolute  left-0 w-full -z-50 top-0" src="../../assets/img/teambee.jpeg" alt="">
 

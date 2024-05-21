@@ -9,11 +9,9 @@
                 of the competition and elevate your business with our unmatched
                 expertise in blockchain technology."
             </p>
-            <button type="button"
-                class="mx-auto hover:skew-x-3 hover:-skew-y-2 transition-all duration-1000  cursor-pointer"
+            <button type="button" class="mx-auto grad-button w-fit font-semibold px-10 py-3 text-white bg-white/10  transition-all duration-1000  hover:bg-white/20 transition-all duration-1000 rounded-xl  cursor-pointer"
                 data-twe-toggle="modal" data-twe-target="#exampleModalCenter" data-twe-ripple-init
-                data-twe-ripple-color="light">
-                <img class="h-10" src="./../../assets/icons/button.svg" alt="" />
+                data-twe-ripple-color="light"> get in touch
             </button>
             <div class="flex justify-center items-center" data-aos="fade-up" data-aos-offset="200"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">

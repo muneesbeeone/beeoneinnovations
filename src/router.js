@@ -5,6 +5,7 @@ import Products from "./views/Products.vue";
 import AboutUs from "./views/AboutUs.vue";
 import Careers from "./views/Careers.vue";
 import ContactUs from "./views/ContactUs.vue"
+import ErrorPage from "./components/common/ErrorPage.vue";
 const routes = [
   {
     path: "/",
@@ -16,11 +17,6 @@ const routes = [
     name: "Technologies",
     component: Technologies,
   },
-  // {
-  //   path: "/technologies/:id",
-  //   name: "Technologies",
-  //   component: Technologies,
-  // },
   {
     path: "/products",
     name: "Products",
@@ -40,7 +36,22 @@ const routes = [
     path: "/contactus",
     name: "ContactUs",
     component: ContactUs,
-  }
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "ErrorPage",
+    component: ErrorPage,
+  },
+  {
+    path: "/404",
+    name: "NotFound",
+    component: ErrorPage,
+  },
+  // Redirect any other unmatched route to the not found page
+  {
+    path: "/:pathMatch(.*)",
+    redirect: "/404",
+  },
   // Add more routes as needed
 ];
 

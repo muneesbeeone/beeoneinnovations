@@ -29,10 +29,10 @@
             heights in the digital landscape
           </p>
         </div>
-        <button type="button" class="mx-auto md:mx-0 relative cursor-pointer" data-twe-toggle="modal"
-          data-twe-target="#exampleModalCenter" data-twe-ripple-init data-twe-ripple-color="light">
-          <img class="h-10 rounded-xl" src="./../../assets/icons/button.svg" alt="" />
-        </button>
+        <button type="button" class="mx-auto md:mx-0 relative grad-button font-semibold px-10 py-3 text-white bg-white/10  transition-all duration-1000  hover:bg-white/20 rounded-xl  cursor-pointer"
+                data-twe-toggle="modal" data-twe-target="#exampleModalCenter" data-twe-ripple-init
+                data-twe-ripple-color="light"> get in touch
+              </button>
       </div>
       <div class="w-full flex items-center text-center justify-center relative hidden md:block">
         <div class="absolute w-full flex justify-center">

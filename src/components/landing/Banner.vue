@@ -16,11 +16,15 @@
                   Inspiring Tomorrow's Breakthroughs.
                 </p>
               </div>
-              <button type="button" class="mx-auto md:mx-0  cursor-pointer"
+              <button type="button" class="mx-auto md:mx-0 grad-button font-semibold px-10 py-3 text-white bg-white/10  transition-all duration-1000  hover:bg-white/20 transition-all duration-1000 rounded-xl  cursor-pointer"
+                data-twe-toggle="modal" data-twe-target="#exampleModalCenter" data-twe-ripple-init
+                data-twe-ripple-color="light"> get in touch
+              </button>
+              <!-- <button type="button" class="mx-auto md:mx-0 bg-custom-gradient transition-colors duration-1000 hover:bg-custom-gradient-hover transition-all duration-1000 rounded-xl  cursor-pointer"
                 data-twe-toggle="modal" data-twe-target="#exampleModalCenter" data-twe-ripple-init
                 data-twe-ripple-color="light">
                 <img class="h-12" src="./../../assets/icons/button.svg" alt="" />
-              </button>
+              </button> -->
             </div>
           </div>
           <div class="flex flex-col relative justify-center order-1 md:order-2">
@@ -35,12 +39,11 @@
         </div>
         <div
           class="absolute text-sm lg:text-md w-fit text-white px-5 pr-5 mb-10 space-y-3 flex justify-end flex-col left-0">
-          <a href="#" target="_parent"><img src="./../../assets//icons/insta.svg" alt="" /></a>
-          <a href="#" target="_blank"><img src="./../../assets/icons/facebook.svg" alt="" /></a>
-
-          <a href="#" target="_parent"><img src="./../../assets/icons/x.svg" alt="" /></a>
-          <a href="#" target="_blank"><img src="./../../assets/icons/linkedin1.svg" alt="" /></a>
-          <a href="#" target="_blank"><img src="./../../assets/icons/youtube.svg" alt="" /></a>
+          <a href="https://www.facebook.com/beeoneinnovations" target="_parent" class="h-9 w-9 bg-white/10 flex justify-center items-center rounded-lg hover:bg-white/20 transition-all"><i class='bx bxl-instagram text-xl'></i></a>
+          <a href="https://www.instagram.com/beeoneinnovations/" target="_blank" class="h-9 w-9 bg-white/10 flex justify-center items-center rounded-lg hover:bg-white/20 transition-all"><i class='bx bxl-facebook text-xl'></i></a>
+          <a href="https://twitter.com/beeinnovations" target="_parent" class="h-9 w-9 bg-white/10 flex justify-center items-center rounded-lg hover:bg-white/20 transition-all"><img class="h-4" src="../../assets/icons/x.ico" alt="" /></a>
+          <a href="https://www.linkedin.com/company/beeone-innovations" target="_blank" class="h-9 w-9 bg-white/10 flex justify-center items-center rounded-lg hover:bg-white/20 transition-all"><i class='bx bxl-linkedin text-xl'></i></a>
+          <!-- <a href="#" target="_blank"><img src="./../../assets/icons/youtube.svg" alt="" /></a> -->
         </div>
       </div>
     </div>
@@ -58,13 +61,23 @@
 export default {
   data() {
     return {
-      isHovered: false
+      isHovered: false,
+      isFadeOut: false,
+      isSticky: false,
+      scrollThreshold: 1
     };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
     toggleHover() {
       this.isHovered = !this.isHovered;
     },
+    
   },
 };
 </script>

@@ -54,14 +54,13 @@
       </div>
       <hr class="mt-8">
       <div class="flex justify-between space-y-3 md:space-y-0 flex-wrap items-center mt-5">
-        <p class="text-white">Terms and conditions@beeoneinnovations</p>
-        <div class="text-sm lg:text-md w-fit items-center border-white space-x-2 flex">
-          <a href="#" target="_parent"><img src="../assets//icons/insta.svg" alt="" /></a>
-          <a href="#" target="_blank"><img src="../assets/icons/facebook.svg" alt="" /></a>
-
-          <a href="#" target="_parent"><img src="../assets/icons/x.svg" alt="" /></a>
-          <a href="#" target="_blank"><img src="../assets/icons/linkedin1.svg" alt="" /></a>
-          <a href="#" target="_blank"><img src="../assets/icons/youtube.svg" alt="" /></a>
+        <p class="text-white"><a href="#" class="">Terms and conditions</a> @beeoneinnovations</p>
+        <div class="text-sm lg:text-md text-white w-fit items-center border-white space-x-2 flex">
+          <a href="https://www.facebook.com/beeoneinnovations" target="_parent" class="h-9 w-9 bg-white/10 flex justify-center items-center rounded-lg hover:bg-white/20 transition-all"><i class='bx bxl-instagram text-xl'></i></a>
+          <a href="https://www.instagram.com/beeoneinnovations/" target="_blank" class="h-9 w-9 bg-white/10 flex justify-center items-center rounded-lg hover:bg-white/20 transition-all"><i class='bx bxl-facebook text-xl'></i></a>
+          <a href="https://twitter.com/beeinnovations" target="_parent" class="h-9 w-9 bg-white/10 flex justify-center items-center rounded-lg hover:bg-white/20 transition-all"><img class="h-4" src="../assets/icons/x.ico" alt="" /></a>
+          <a href="https://www.linkedin.com/company/beeone-innovations" target="_blank" class="h-9 w-9 bg-white/10 flex justify-center items-center rounded-lg hover:bg-white/20 transition-all"><i class='bx bxl-linkedin text-xl'></i></a>
+          <!-- <a href="#" target="_blank"><img src="../assets/icons/youtube.svg" alt="" /></a> -->
         </div>
       </div>
 

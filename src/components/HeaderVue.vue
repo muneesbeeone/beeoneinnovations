@@ -1,6 +1,6 @@
 <template>
   <!-- :class="[isSticky?'sticky fade-in backdrop-blur-lg':'absolute',isFadeOut?'fade-out':'fade-in']" -->
-  <header class="inset-x-0 absolute top-0 z-[100] transition-colors duration-1000" id="header" :class="[isSticky?'sticky fade-in bg-black':'absolute bg-transparent pb-2 md:pb-0',isFadeOut?'':'fade-in']">
+  <header class="inset-x-0 absolute top-0 z-[100] transition-colors duration-1000" id="header" :class="[isSticky?' fade-in bg-black':'absolute bg-transparent pb-2 md:pb-0',isFadeOut?'':'fade-in']">
     <nav
       class="flex navbar px-0 md:px-5 w-full flex-nowrap items-center justify-between text-white py-5  h-full hover:text-neutral-100 focus:text-neutral-100 lg:flex-wrap lg:justify-start lg:py-2"
       data-twe-navbar-ref>

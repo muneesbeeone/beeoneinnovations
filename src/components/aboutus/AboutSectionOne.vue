@@ -19,12 +19,10 @@
             technology with our commitment to innovation and excellence
           </p>
         </div>
-        <button type="button"
-          class="mx-auto hover:skew-x-3 hover:-skew-y-2 transition-all duration-1000  cursor-pointer"
-          data-twe-toggle="modal" data-twe-target="#exampleModalCenter" data-twe-ripple-init
-          data-twe-ripple-color="light">
-          <img class="h-10" src="./../../assets/icons/button.svg" alt="" />
-        </button>
+        <button type="button" class="mx-auto grad-button w-fit font-semibold px-10 py-3 text-white bg-white/10  transition-all duration-1000  hover:bg-white/20 transition-all duration-1000 rounded-xl  cursor-pointer"
+                data-twe-toggle="modal" data-twe-target="#exampleModalCenter" data-twe-ripple-init
+                data-twe-ripple-color="light"> get in touch
+            </button>
       </div>
     </div>
     <div>
