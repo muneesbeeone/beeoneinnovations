@@ -45,19 +45,19 @@
           </div>
           <h2 class="text-3xl text-white font-thin">Get In touch</h2>
           <form @submit.prevent="submitForm" class="contact-form grid grid-cols-2 gap-5 w-full">
-            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="First Name" required type="text"
+            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="First Name" pattern="[A-Za-z ]+" title="Name must contain only letters" required type="text"
               v-model="firstName">
-            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Second name" required type="text"
+            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Second name" required pattern="[A-Za-z ]+" title="Name must contain only letters" type="text"
               v-model="lastName">
             <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Email" required type="email"
               v-model="email">
-            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Phone" required type="text"
+            <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="Phone" title="please enter valid phone number" pattern="[0-9]{10,14}" required type="text"
               v-model="phone">
             <textarea class="py-3 rounded-md col-span-2 bg-[#262626] required text-white px-3" placeholder="Write note"
               v-model="note"></textarea>
-            <div class="col-span-2 flex md:justify-end justify-center">
-              <button type="submit"><img class="h-14" src="../../assets/img/apply-large-btn.svg" alt=""></button>
-            </div>
+            <div class="hidden md:block"></div>
+            <button type="submit" class="grad-button col-span-2 md:col-span-1 text-white px-10 py-3 w-full  bg-white/10  transition-all duration-1000  hover:bg-white/20">Enquire now</button>
+
           </form>
 
         </div>
@@ -79,7 +79,7 @@ export default {
       email: '',
       phone: '',
       note: '',
-      loader:false
+      loader: false
     };
   },
   methods: {
@@ -115,7 +115,7 @@ export default {
           this.email = '';
           this.phone = '';
           this.note = '';
-        }else{
+        } else {
           this.loader = false;
         }
       } catch (error) {

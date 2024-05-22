@@ -30,14 +30,16 @@
                             </span>
                         </button>
                     </div>
-                    <form @submit.prevent="submitForm">
-                        <div class="relative p-4 grid md:grid-cols-2 grid-cols-1 gap-7">
+                    <form @submit.prevent="submitForm()">
+                        <div class="relative pr-0 md:pr-4 grid md:grid-cols-2 grid-cols-1 gap-7">
                             <div class="relative flex h-14 w-full min-w-[200px]">
                                 <input v-model="formData.firstName" placeholder="First Name" required type="text"
+                                    pattern="[A-Za-z ]+" title="Name must contain only letters"
                                     class="peer h-full w-full border-b border-white-gray-50 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0" />
                             </div>
                             <div class="relative h-14 w-full min-w-[200px]">
                                 <input v-model="formData.lastName" placeholder="Last Name" required type="text"
+                                    pattern="[A-Za-z ]+" title="Name must contain only letters"
                                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                             </div>
                             <div class="relative h-14 w-full min-w-[200px]">
@@ -45,31 +47,30 @@
                                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                             </div>
                             <div class="relative h-14 w-full min-w-[200px]">
-                                <input v-model="formData.phone" placeholder="Phone" required type="phone"
+                                <input v-model="formData.phone" placeholder="Phone" required type="text"
+                                    title="please enter valid phone number" pattern="[0-9]{10,14}"
                                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                             </div>
                             <div class="relative h-14 w-full min-w-[200px]">
-                                <input type="file" @change="handleFileUpload" required ref="fileInput"
+                                <input type="file" @change="handleFileUpload" ref="fileInput"
                                     style="display: none" accept="application/pdf" />
                                 <input placeholder="File"
                                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                                     :value="selectedFileName" readonly @click="openFilePicker" />
                                 <i class="absolute bottom-3 right-1 bx bx-upload text-white"
                                     @click="openFilePicker"></i>
+                                <p></p>
                             </div>
                             <div class="relative h-14 w-full min-w-[200px]">
-                                <select id="jobTitle" placeholder="Job Title"
+                                <select id="jobTitle" placeholder="Job Title" required
                                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
                                     <option class="text-black" value="Product Designer">Product Designer</option>
                                     <option class="text-black" value="Manual Tester">Manual Tester</option>
                                 </select>
                             </div>
-                        </div>
-                        <div class="flex flex-shrink-0 flex-wrap items-center justify-end p-4">
-                            <button type="submit" class="ms-1 inline-block rounded" data-twe-ripple-init
-                                data-twe-ripple-color="light">
-                                <img class="h-10" src="./../../assets/img/apply-large-btn.svg" alt="" />
-                            </button>
+                            <div class="text-red-500">{{ fileError }}</div>
+                            <button type="submit" class="grad-button text-white px-10 py-3 w-full  bg-white/10  transition-all duration-1000  hover:bg-white/20">Apply now</button>
+
                         </div>
                     </form>
                 </div>
@@ -106,7 +107,8 @@ export default {
                 jobTitle: '',
                 file: null,
             },
-            loader:false
+            loader: false,
+            fileError: ''
         }
     },
     mounted() {
@@ -121,6 +123,20 @@ export default {
         },
         handleFileUpload(event) {
             const file = event.target.files[0];
+            if (file) {
+                if (file.type !== 'application/pdf') {
+                    this.fileError = 'File must be a PDF';
+                    this.$refs.fileInput.value = '';
+                    return;
+                }
+                if (file.size > 2 * 1024 * 1024) {
+                    this.fileError = 'File size must be less than 2MB';
+                    this.$refs.fileInput.value = '';
+                    return;
+                }
+                this.selectedFileName = file.name;
+                this.fileError = null;
+            }
             this.formData.file = event.target.files[0];
             this.selectedFile = file;
             this.selectedFileName = file ? file.name : 'Choose file...';
@@ -128,6 +144,10 @@ export default {
 
         },
         submitForm() {
+            if (this.$refs.fileInput.files.length === 0) {
+                this.fileError = 'File is required';
+                return;
+            }
             this.loader = true
 
             const formData = new FormData();

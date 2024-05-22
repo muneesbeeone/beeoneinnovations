@@ -31,13 +31,13 @@
                         </button>
                     </div>
                     <form @submit.prevent="submitForm">
-                        <div class="relative p-4 grid md:grid-cols-2 grid-cols-1 gap-7">
+                        <div class="relative pr-0 md:pr-4 grid md:grid-cols-2 grid-cols-1 gap-7">
                             <div class="relative flex h-14 w-full min-w-[200px]">
-                                <input v-model="firstName" placeholder="First Name" required type="text"
+                                <input v-model="firstName" placeholder="First Name" required type="text" pattern="[A-Za-z ]+" title="Name must contain only letters"
                                     class="peer h-full w-full border-b border-white-gray-50 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0" />
                             </div>
                             <div class="relative h-14 w-full min-w-[200px]">
-                                <input v-model="lastName" placeholder="Second name" required type="text"
+                                <input v-model="lastName" placeholder="Second name" required type="text" pattern="[A-Za-z ]+" title="Name must contain only letters"
                                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                             </div>
                             <div class="relative h-14 w-full min-w-[200px]">
@@ -45,19 +45,16 @@
                                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                             </div>
                             <div class="relative h-14 w-full min-w-[200px]">
-                                <input v-model="phone" placeholder="Phone" required type="number"
+                                <input v-model="phone" placeholder="Phone" required type="text" title="please enter valid phone number" pattern="[0-9]{10,14}"
                                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" />
                             </div>
                             <div class="relative md:col-span-2 col-span-1 h-14 w-full min-w-[200px]">
                                 <textarea v-model="note" placeholder="Write note" required
                                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-gray-50 outline outline-0 transition-all placeholder-shown:border-gray-50 focus:border-gray-100 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"></textarea>
                             </div>
-                        </div>
-                        <div class="flex flex-shrink-0 flex-wrap items-center justify-end p-4">
-                            <button type="submit" class="ms-1 inline-block rounded" data-twe-ripple-init
-                                data-twe-ripple-color="light">
-                                <img class="h-10" src="./../../assets/img/sendnowbtn.webp" alt="" />
-                            </button>
+                            <div class="hidden md:block"></div>
+                            <button type="submit" class="grad-button text-white px-10 py-2 w-full  bg-white/10  transition-all duration-1000  hover:bg-white/20">Enquire now</button>
+
                         </div>
                     </form>
                 </div>
