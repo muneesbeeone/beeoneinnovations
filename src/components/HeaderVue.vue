@@ -98,7 +98,7 @@
               class="py-4 ps-2 lg:my-0 lg:pe-1 rounded-lg hover:bg-black/20 md:hover:bg-transparent lg:ps-2 hidden md:block"
               data-twe-nav-item-ref>
               <button data-twe-toggle="modal" data-twe-target="#exampleModalCenter" data-twe-ripple-init
-                data-twe-ripple-color="light" class="text-white lg:px-2 bg-gray-500 rounded-md">Contact
+                data-twe-ripple-color="light" class="text-white transition-all duration-[2500ms] lg:px-3 lg:py-[2px] bg-[#D9D9D942] hover:bg-transparent ring-0 ring-gray-500 hover:ring-1 rounded-md">Contact
                 Us</button>
             </li>
           </ul>
