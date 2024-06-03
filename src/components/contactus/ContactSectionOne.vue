@@ -43,7 +43,7 @@
               <div class="square" id="sq9"></div>
             </div>
           </div>
-          <h2 class="text-3xl text-white font-thin">Get In touch</h2>
+          <h2 class="text-3xl text-white font-thin">Get in touch</h2>
           <form @submit.prevent="submitForm" class="contact-form grid grid-cols-2 gap-5 w-full">
             <input class="py-3 rounded-md bg-[#262626] text-white px-3" placeholder="First Name" pattern="[A-Za-z ]+" title="Name must contain only letters" required type="text"
               v-model="firstName">

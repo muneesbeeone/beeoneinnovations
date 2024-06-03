@@ -6,6 +6,7 @@ import AboutUs from "./views/AboutUs.vue";
 import Careers from "./views/Careers.vue";
 import ContactUs from "./views/ContactUs.vue"
 import ErrorPage from "./components/common/ErrorPage.vue";
+import News from "./views/News.vue";
 const routes = [
   {
     path: "/",
@@ -31,6 +32,11 @@ const routes = [
     path: "/careers",
     name: "Careers",
     component: Careers,
+  },
+  {
+    path: "/news",
+    name: "News",
+    component: News,
   },
   {
     path: "/contactus",

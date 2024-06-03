@@ -6,7 +6,7 @@
             </p>
             <button type="button" class="mx-auto grad-button w-fit font-semibold px-10 py-3 text-white bg-white/10  transition-all duration-1000  hover:bg-white/20 transition-all duration-1000 rounded-xl  cursor-pointer"
                 data-twe-toggle="modal" data-twe-target="#exampleModalCenter" data-twe-ripple-init
-                data-twe-ripple-color="light"> get in touch
+                data-twe-ripple-color="light"> Get in touch
             </button>
             <div class="flex justify-center items-center py-5 md:py-10"  data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-easing="ease-in-out">
               <img class="relative z-10 w-[100%] -mt-0 hidden md:block" src="./../../assets/img/mobileapp.webp" alt="" />

@@ -18,7 +18,7 @@
               </div>
               <button type="button" class="mx-auto md:mx-0 grad-button font-semibold px-10 py-3 text-white bg-white/10  transition-all duration-1000  hover:bg-white/20 rounded-xl  cursor-pointer"
                 data-twe-toggle="modal" data-twe-target="#exampleModalCenter" data-twe-ripple-init
-                data-twe-ripple-color="light"> get in touch
+                data-twe-ripple-color="light"> Get in touch
               </button>
               <!-- <button type="button" class="mx-auto md:mx-0 bg-custom-gradient transition-colors duration-1000 hover:bg-custom-gradient-hover transition-all duration-1000 rounded-xl  cursor-pointer"
                 data-twe-toggle="modal" data-twe-target="#exampleModalCenter" data-twe-ripple-init
